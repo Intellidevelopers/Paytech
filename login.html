@@ -160,7 +160,7 @@
             :class="show ? 'fa-eye-slash' : 'fa-eye'"></i>
         </a>
       </div>
-
+<br>
       <div class="flex justify-end mt-2">
         <a style="font-weight: 500;"
           href="account-recovery.html"
@@ -184,16 +184,16 @@
       </label>
     </div>
 
-    <div>
-      <button type="submit" onclick="login()" 
-        :disabled="loading"
-        :class="loading ? 'opacity-60' : ''"
-        class="w-full p-3 text-white duration-300 rounded hover:shadow bg-atg">
-        <span :class="loading ? 'hidden': ''">Login</span>
-        <span :class="loading ? '': 'hidden'">
-          <i class="fa fa-circle-notch fa-spin"></i> Please wait...
-        </span>
-      </button>
+    <div style="text-align: center;">
+      <a type="submit" onclick="login()" 
+      :disabled="loading"
+      :class="loading ? 'opacity-60' : ''"
+      class="w-full p-3 text-white duration-300 rounded hover:shadow bg-atg" href="dashboard.html">
+      <span :class="loading ? 'hidden': ''">Login</span>
+      <span :class="loading ? '': 'hidden'">
+        <i class="fa fa-circle-notch fa-spin"></i> Please wait...
+      </span>
+      </a>
     </div>
 
     <div class="text-sm text-center">

@@ -1,0 +1,39 @@
+.vendor-img{
+    width: 50px;
+    border-radius: 100px;
+    border: 3px solid white;
+}
+.vendor{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: white;
+}
+.cod,  .usname{
+    margin-top: 10px;
+}
+.usname, a:hover{
+    opacity: 0.7;
+}
+.bgr{
+    background-color: whitesmoke;
+    padding: 50px;
+}
+.text-sms{
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.637);
+}
+.hdtext{
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.822);
+    margin-left: -53%;
+}
+.under{
+    font-weight: 400;
+    margin-left: -19%;
+}
+input::placeholder{
+    color: rgba(167, 161, 161, 0.575);
+    outline: red;
+}

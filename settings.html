@@ -1,0 +1,1633 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#ab2923">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="csrf-token" content="f849f83a7bc6fa24c1ce39fb6761715b963eba52">
+  <meta name="google-site-verification" content="c_LAXHEHxcNq1-aJO5h6KHVhmuVz7pgsfx9HbbN7BXg" />
+    <meta name="description"
+    content="Fastest and easiest way to convert your airtime to cash. Accept payments for your business and services today using airtime." />
+  
+    <meta name="keywords"
+    content="Easiest way to convert airtime to cash in Nigeria, Make payment with airtime, Send and recieve payment in Nigeria with airtime, airtime is money, buy cheap data, MTN, Glo, 9mobile, Airtel, make payment for Gotv, Dstv" />
+    <meta property="og:image" content="https://aimtoget.com/assets/images/new/favicon.png">
+  <title>Account Settings
+</title>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/styles.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2.5/fonts.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/iziToast.min.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/sweetalert2.min.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/fontawesome-free-6.1.2-web/css/all.min.css">
+  <link rel="icon" href="https://aimtoget.com/assets/images/new/atg-favicon.png">
+  <link rel="stylesheet" href="assets/fontawesome-free-6.1.2-web/css/all.min.css">
+  <script src="https://aimtoget.com/assets/js/v2/alpine.persist.min.js" defer></script>
+  <script src="https://aimtoget.com/assets/js/v2/alpine.intersect.min.js" defer></script>
+  <script defer src="https://aimtoget.com/assets/js/v2/alpine.min.js"></script>
+  <script src="https://aimtoget.com/assets/js/axios.min.js?v=2.5.6998"></script>
+  <script>const BASE_URL = 'https://aimtoget.com';</script>
+  <script src="https://aimtoget.com/assets/js/v2/iziToast.min.js?v=2.5.6998"></script>
+  <script src="https://aimtoget.com/assets/js/v2/sweetalert2.all.min.js?v=2.5.6998"></script>
+  <script src="https://aimtoget.com/assets/js/v2/utils.js?v=2.5.6998"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90432823-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-90432823-1');
+  </script>
+
+    </head>
+
+<body
+  class="bg-white"
+  :class="(sidebar_open || is_fund_modal_open) ? 'overflow-hidden h-full' : ''"
+  x-init="() => {
+    $refs.sidebar.classList.remove('-left-72')
+  }"
+  x-data="{
+    sidebar_open:false,
+    is_fund_modal_open: false,
+    openNairaPin() {
+      Notify.error(
+        'Service Unavailable!',
+        'Naira pin is currently unavailable. Please check back later.'
+      )
+    }
+  }">
+  <aside
+    x-ref="sidebar"
+    class="fixed inset-y-0 px-6 py-5 text-sm text-gray-800 duration-300 bg-gray-100 border-r -left-72 lg:left-0 w-72"
+    :class="sidebar_open ? 'left-0 z-40' : '-left-72 lg:left-0'">
+    
+    <div class="p-5 bg-white rounded-lg shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <a href="">
+            princejboy
+          </a>
+        </div>
+        <div>
+          <a href="https://aimtoget.com/app/logout">
+            <i class="fa fa-power-off"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="mt-10 space-y-8">
+      <li>
+        <ul class="space-y-4">
+          <li>
+            <a
+              class="block duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app">
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="inline-block ml-1">
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="block duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/transactions">
+              <i class="far fa-list-alt"></i>
+              <span class="inline-block ml-1">
+                Transaction History
+              </span>
+            </a>
+          </li>
+                  </ul>
+      </li>
+
+      <li>
+        <div class="font-medium text-gray-500">
+          Main
+        </div>
+        <ul class="mt-2 space-y-3">
+          <li>
+            <a
+              href=""
+              @click.prevent="sidebar_open = false; is_fund_modal_open = true"
+              class="duration-300 hover:text-primary-main">
+              <i class="fab fa-pushed"></i>
+              <span class="inline-block ml-1">
+                Fund Wallet
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/airtime/fund">
+              <i class="fas fa-crosshairs"></i>
+              <span class="inline-block ml-1">
+                Airtime To Cash
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/withdraw">
+              <i class="fa fa-university"></i>
+              <span class="inline-block ml-1">
+                Withdraw Funds
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/transfer">
+              <i class="fa fa-arrow-right"></i>
+              <span class="inline-block ml-1">
+                Transfer Funds
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="font-medium text-gray-500">
+          Services
+        </div>
+        <ul class="mt-2 space-y-3">
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/airtime">
+              <i class="fas fa-signal"></i>
+              <span class="inline-block ml-1">
+                Airtime Topup
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/data">
+              <i class="fas fa-wifi"></i>
+              <span class="inline-block ml-1">
+                Data Topup
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/bills">
+              <i class="fas fa-money-bill-wave-alt"></i>
+              <span class="inline-block ml-1">
+                Pay Bills
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href=""
+              @click.prevent="openNairaPin">
+              <i class="fas fa-credit-card"></i>
+              <span class="inline-block ml-1">
+                Naira Pin
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="font-medium text-gray-500">
+          Settings
+        </div>
+        <ul class="mt-2 space-y-3">
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/settings">
+              <i class="fas fa-cog"></i>
+              <span class="inline-block ml-1">
+                Account Settings
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="https://aimtoget.com/app/logout">
+              <i class="fas fa-power-off"></i>
+              <span class="inline-block ml-1">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <main class="lg:ml-72">
+    <header class="fixed inset-x-0 top-0 z-10 px-5 py-3 bg-white border-b lg:z-0 lg:relative">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-x-5">
+          <div class="flex items-center lg:hidden">
+            <a 
+              href="" 
+              @click.prevent="sidebar_open = !sidebar_open"
+              class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://aimtoget.com/app">
+              <img
+                class="h-6 lg:h-7"
+                src="https://aimtoget.com/assets/images/new/aimtoget-logo.svg"
+                alt="">
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-3 lg:gap-x-5">
+          <a
+            x-data="{
+              show_balance: $persist(false).as('atg_balance_show')
+            }"
+            x-init="() => {
+              window.addEventListener('show_hide_balance', e => {
+                show_balance = !show_balance
+              })
+            }"
+            @click.prevent="show_balance = !show_balance"
+            href=""
+            class="hidden px-2 py-1 text-sm text-white duration-300 rounded lg:block lg:px-3 lg:py-2 hover:bg-primary-600 bg-primary-main">
+            ₦ 
+            <span
+              x-cloak
+              :class="show_balance ? '' : 'hidden'">
+              19,920.00
+            </span>
+            <span
+              x-cloak
+              :class="show_balance ? 'hidden' : ''">
+              ******
+            </span>
+          </a>
+          <a
+            href="https://aimtoget.com/app/settings"
+            class="px-1 text-gray-800 lg:text-xl lg:px-2 lg:py-1 hover:bg-gray-100 rounded-xl">
+            <i class="fa fa-cog"></i>
+          </a>
+          <a
+            href=""
+            class="px-1 text-gray-800 lg:text-xl lg:px-2 lg:py-1 hover:bg-gray-100 rounded-xl">
+            <i class="far fa-bell"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+        <div
+      class="container relative z-0 px-5 pb-10 mx-auto mt-16 lg:mt-0">
+      <div
+  x-data="{
+    tab: 1,
+    tabs: {
+      PROFILE: 1,
+      SECURITY: 2,
+      //PAYMENTS: 3
+    }
+  }">
+
+  <div class="mt-5">
+    <ul class="inline-flex p-2 overflow-hidden text-sm text-gray-800 bg-gray-100 rounded-full gap-x-2">
+      <template x-for="(value, key) in tabs">
+        <li>
+          <a
+            @click.prevent="tab = value"
+            class="block px-5 py-1 capitalize duration-300 rounded-full"
+            :class="tab == value ? 'bg-white' : 'hover:bg-atg-light'"
+            href=""
+            x-text="key.toLowerCase()">
+          </a>
+        </li>
+      </template>
+    </ul>
+  </div>
+
+  <div class="mt-5 lg:mt-10">
+    <div
+      :class="tab === tabs.PROFILE ? '' : 'hidden'"
+      x-cloak>
+      <div>
+        <div>
+          <div class="pb-3 text-2xl text-gray-400 border-b border-gray-100">
+            Account Information
+          </div>
+    
+          <div class="lg:w-7/12">
+            <div class="mt-10 space-y-6">
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Username:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Your username cannot be changed.
+                  </div>
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  @princejboy
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  Fullname:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  Josiah Adeagbo
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  Wallet Balance:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  NGN19,920.00
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  Email Address:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  adeagbojosiah1@gmail.com
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  Phone Number:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  09063711636
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  BVN:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                                    *******4225
+                                  </div>
+              </div>
+                                          <div class="grid lg:grid-cols-2">
+                <div>
+                  Bank:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  ******8169 (Keystone bank)
+                </div>
+              </div>
+                            <div class="grid lg:grid-cols-2">
+                <div>
+                  Level:
+                </div>
+                <div class="font-light text-gray-600 lg:flex lg:items-center">
+                  Level 2
+                  (<a
+                    class="font-medium hover:underline text-atg"
+                    href="https://aimtoget.com/app/upgrade/levels">Upgrade</a>)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div
+        class="mt-12"
+        x-data="{
+          is_loading: false,
+          enable_sms: true,
+          enable_push_notification: true,
+          send_low_balance_notification: false,
+          low_balance_amount: '0',
+          save() {
+            let {
+              enable_sms,
+              enable_push_notification,
+              send_low_balance_notification,
+              low_balance_amount
+            } = this
+  
+            let params = {
+              enable_sms,
+              enable_push_notification,
+              send_low_balance_notification,
+              low_balance_amount
+            }
+  
+            this.is_loading = true
+            let uri = utils.api_endpoint('/me/settings')
+            $http.post(uri, params)
+              .then(({data}) => {
+                let { status } = data
+  
+                if(status === 'ok') {
+                  return Notify.success(
+                    data.msg,
+                    data.data.msg
+                  )
+                }
+  
+                if(status === 'error') {
+                  return Notify.error(
+                    data.msg,
+                    data.data.msg
+                  )
+                }
+  
+                Notify.connectionError()
+              })
+              .catch(() => Notify.connectionError())
+              .finally(() => this.is_loading = false)
+          }
+        }">
+        <div>
+          <div class="pb-3 text-2xl text-gray-400 border-b border-gray-100">
+            Other Settings
+          </div>
+    
+          <div class="lg:w-7/12">
+            <div class="mt-10 space-y-6">
+              <div class="grid grid-cols-4 lg:grid-cols-2">
+                <div class="col-span-3 lg:col-span-1">
+                  <div>
+                    SMS Alerts:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Receive SMS Alerts for every transaction (NGN3 per SMS)
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-end lg:justify-start">
+                  <div x-data=>
+  <a
+    @click.prevent="enable_sms = !enable_sms" 
+    href="">
+    <span
+      class="flex items-center w-12 h-6 px-1 duration-500 bg-gray-200 rounded-full"
+      :class="enable_sms ? 'justify-end' : 'justify-start' ">
+      <span
+        class="w-4 h-4 duration-500 rounded-full"
+        :class="enable_sms ? 'bg-atg' : 'bg-gray-500'"></span>
+    </span>
+  </a>
+</div>                </div>
+              </div>
+              <div class="grid grid-cols-4 lg:grid-cols-2">
+                <div class="col-span-3 lg:col-span-1">
+                  <div>
+                    Push Notifications:
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-end lg:justify-start">
+                  <div x-data=>
+  <a
+    @click.prevent="enable_push_notification = !enable_push_notification" 
+    href="">
+    <span
+      class="flex items-center w-12 h-6 px-1 duration-500 bg-gray-200 rounded-full"
+      :class="enable_push_notification ? 'justify-end' : 'justify-start' ">
+      <span
+        class="w-4 h-4 duration-500 rounded-full"
+        :class="enable_push_notification ? 'bg-atg' : 'bg-gray-500'"></span>
+    </span>
+  </a>
+</div>                </div>
+              </div>
+              <div class="grid grid-cols-4 lg:grid-cols-2">
+                <div class="col-span-3 lg:col-span-1">
+                  <div>
+                    Low Balance Notification:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    We will send you a message once your balance is low.
+                  </div>
+                </div>
+                <div
+                  class="flex items-center justify-end lg:justify-start">
+                  <div x-data=>
+  <a
+    @click.prevent="send_low_balance_notification = !send_low_balance_notification" 
+    href="">
+    <span
+      class="flex items-center w-12 h-6 px-1 duration-500 bg-gray-200 rounded-full"
+      :class="send_low_balance_notification ? 'justify-end' : 'justify-start' ">
+      <span
+        class="w-4 h-4 duration-500 rounded-full"
+        :class="send_low_balance_notification ? 'bg-atg' : 'bg-gray-500'"></span>
+    </span>
+  </a>
+</div>                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div class="mb-1 lg:mb-0">
+                  <div>
+                    Low Balance Limit:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Amount low balance notification will be sent
+                  </div>
+                </div>
+                <div
+                  class="flex items-center">
+                  <input
+                    :disabled="is_loading"
+                    x-model="low_balance_amount"
+                    placeholder="Low balance amount"
+                    class="w-full h-12 px-3 text-sm border border-gray-100 rounded-lg outline-none focus:ring-2 ring-atg-light"
+                    type="number"
+                    min="10">
+                </div>
+              </div>
+              <div class="grid grid-cols-2">
+                <div></div>
+                <div>
+                  <button
+                    @click.prevent="save"
+                    :disabled="is_loading"
+                    class="w-full px-5 py-3 text-white duration-500 rounded-lg lg:w-auto bg-atg"
+                    :class="is_loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-600'">
+                    <template x-if="is_loading">
+                      <span>
+                        <i class="fa fa-spin fa-circle-notch"></i> Please wait...
+                      </span>
+                    </template>
+                    <template x-if="!is_loading">
+                      <span>Save Changes</span>
+                    </template>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div
+      :class="tab === tabs.SECURITY ? '' : 'hidden'"
+      x-cloak
+      x-data="{
+        reset_pin_modal: false,
+        show_password_modal: false,
+        show_pin_modal: false
+      }">
+      <div>
+        <div>
+          <div class="pb-3 text-2xl text-gray-400 border-b border-gray-100">
+            Password & Pin
+          </div>
+    
+          <div class="lg:w-7/12">
+            <div class="mt-10 space-y-10">
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Update Password:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Change your old password to a new one
+                  </div>
+                </div>
+                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
+                  <a
+                    href=""
+                    class="text-primary-600 hover:underline"
+                    @click.prevent="show_password_modal = !show_password_modal">
+                    Change your password
+                  </a>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Update Pin:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Change your old transaction pin to a new one
+                  </div>
+                </div>
+                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
+                  <a
+                    href=""
+                    class="text-primary-600 hover:underline"
+                    @click.prevent="show_pin_modal = !show_pin_modal">
+                    Change transaction pin
+                  </a>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Reset Pin:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Forgot your transaction pin. Reset your pin
+                  </div>
+                </div>
+                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
+                  <a
+                    href=""
+                    @click.prevent="reset_pin_modal = true"
+                    class="text-primary-600 hover:underline">
+                    Reset transaction pin
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+  x-cloak
+  $ref="container"
+  class="fixed inset-0 z-[100000] flex items-end justify-center bg-black lg:shadow-xl lg:items-center bg-opacity-70"
+  x-show="show_password_modal"
+  id="show_password_modal"
+  x-transition
+  x-transition.opacity
+  @click="clicked($event)"
+  x-data="{
+    is_loading: false,
+    close() {
+      this.show_password_modal = false
+    },
+    clicked({target}) {
+      if(this.is_loading) {
+        return
+      }
+      
+      if(target.getAttribute('id') === 'show_password_modal') {
+        this.close()
+      }
+    }
+  }">
+  <div class="w-full p-10 bg-white rounded-lg lg:w-4/12 2xl:w-3/12">
+    <div>
+  <h1 class="text-2xl">
+    Change Password
+  </h1>
+
+  <form
+    @submit.prevent="changePassword"
+    method="post"
+    x-data="{
+      old_password: '',
+      new_password1: '',
+      new_password2: '',
+      changePassword() {
+        let { old_password, new_password1, new_password2 } = this
+        let params = { old_password, new_password1, new_password2 }
+
+        this.is_loading = true
+        let uri = utils.api_endpoint('/me/change-password')
+        $http.post(uri, params)
+          .then(({data}) => {
+            let { status } = data
+
+            if(status === 'ok') {
+              this.close()
+              return Notify.success(
+                'Successful',
+                `${data.msg}. You will be required to login to continue`,
+                () => location.href = data.data.url
+              )
+            }
+
+            if(status === 'error') {
+              return Notify.error(
+                data.data.msg,
+                data.msg
+              )
+            }
+
+            Notify.connectionError()
+          })
+          .catch(() => Notify.connectionError())
+          .finally(() => this.is_loading = false)
+      }
+    }">
+    <div class="mt-6 space-y-4">
+      <div>
+        <label
+          for="old-password"
+          class="text-sm text-gray-400">
+          Old Password:
+        </label>
+        <input
+          id="old-password"
+          x-model="old_password"
+          type="password"
+          placeholder="Enter old password"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          required>
+      </div>
+      <div>
+        <label
+          for="new-password"
+          class="text-sm text-gray-400">
+          New Password:
+        </label>
+        <input
+          id="new-password"
+          x-model="new_password1"
+          type="password"
+          placeholder="Enter new password"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          required>
+      </div>
+      <div>
+        <label
+          for="confirm-password"
+          class="text-sm text-gray-400">
+          Confirm Password:
+        </label>
+        <input
+          id="confirm-password"
+          x-model="new_password2"
+          type="password"
+          placeholder="Confirm password"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          required>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button
+          type="submit"
+          class="w-full px-5 py-3 text-white duration-500 rounded-lg lg:w-auto bg-atg"
+          :class="is_loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-600'">
+          <template x-if="is_loading">
+            <span>
+              <i class="fa fa-spin fa-circle-notch"></i> Please wait...
+            </span>
+          </template>
+          <template x-if="!is_loading">
+            <span>Change Password</span>
+          </template>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>  </div>
+</div>      <div
+  x-cloak
+  $ref="container"
+  class="fixed inset-0 z-[100000] flex items-end justify-center bg-black lg:shadow-xl lg:items-center bg-opacity-70"
+  x-show="show_pin_modal"
+  id="show_pin_modal"
+  x-transition
+  x-transition.opacity
+  @click="clicked($event)"
+  x-data="{
+    is_loading: false,
+    close() {
+      this.show_pin_modal = false
+    },
+    clicked({target}) {
+      if(this.is_loading) {
+        return
+      }
+      
+      if(target.getAttribute('id') === 'show_pin_modal') {
+        this.close()
+      }
+    }
+  }">
+  <div class="w-full p-10 bg-white rounded-lg lg:w-4/12 2xl:w-3/12">
+    <div>
+  <h1 class="text-2xl">
+    Change Pin
+  </h1>
+
+  <form
+    @submit.prevent="changePassword"
+    method="post"
+    x-data="{
+      old_pin: '',
+      new_pin1: '',
+      new_pin2: '',
+      changePassword() {
+        let { old_pin, new_pin1, new_pin2 } = this
+        let params = { old_pin, new_pin1, new_pin2 }
+
+        this.is_loading = true
+        let uri = utils.api_endpoint('/me/change-pin')
+        $http.post(uri, params)
+          .then(({data}) => {
+            let { status } = data
+
+            if(status === 'ok') {
+              this.close()
+              return Notify.success(
+                'Successful',
+                `${data.msg}`,
+                () => location.href = data.data.url
+              )
+            }
+
+            if(status === 'error') {
+              return Notify.error(
+                'Error',
+                data.data.msg
+              )
+            }
+
+            Notify.connectionError()
+          })
+          .catch(() => Notify.connectionError())
+          .finally(() => this.is_loading = false)
+      }
+    }">
+    <div class="mt-6 space-y-4">
+      <div>
+        <label
+          for="old-pin"
+          class="text-sm text-gray-400">
+          Old Pin:
+        </label>
+        <input
+          id="old-pin"
+          x-model="old_pin"
+          type="password"
+          placeholder="Enter old pin"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          required>
+      </div>
+      <div>
+        <label
+          for="new-pin"
+          class="text-sm text-gray-400">
+          New Pin:
+        </label>
+        <input
+          id="new-pin"
+          x-model="new_pin1"
+          type="password"
+          placeholder="Enter new pin"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          required>
+      </div>
+      <div>
+        <label
+          for="confirm-pin"
+          class="text-sm text-gray-400">
+          Confirm Pin:
+        </label>
+        <input
+          id="confirm-pin"
+          x-model="new_pin2"
+          type="password"
+          placeholder="Confirm pin"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          required>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button
+          type="submit"
+          class="w-full px-5 py-3 text-white duration-500 rounded-lg lg:w-auto bg-atg"
+          :class="is_loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-600'">
+          <template x-if="is_loading">
+            <span>
+              <i class="fa fa-spin fa-circle-notch"></i> Please wait...
+            </span>
+          </template>
+          <template x-if="!is_loading">
+            <span>Change Pin</span>
+          </template>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>  </div>
+</div>      <div
+  x-cloak
+  $ref="container"
+  class="fixed inset-0 z-[100000] flex items-end justify-center bg-black lg:shadow-xl lg:items-center bg-opacity-70"
+  x-show="reset_pin_modal"
+  id="reset_pin_modal"
+  x-transition
+  x-transition.opacity
+  @click="clicked($event)"
+  x-data="{
+    is_loading: false,
+    close() {
+      this.reset_pin_modal = false
+    },
+    clicked({target}) {
+      if(this.is_loading) {
+        return
+      }
+      
+      if(target.getAttribute('id') === 'reset_pin_modal') {
+        this.close()
+      }
+    }
+  }">
+  <div class="w-full p-10 bg-white rounded-lg lg:w-4/12 2xl:w-3/12">
+    <div>
+  <h1 class="text-2xl">
+    Reset Pin
+  </h1>
+
+  <form
+    @submit.prevent="resetPin"
+    method="post"
+    x-data="{
+      code: '',
+      pin1: '',
+      pin2: '',
+      has_sent_verification: false,
+      requestVerificationCode() {
+        this.is_loading = true
+        let uri = utils.api_endpoint('/pin-reset/request')
+        $http.post(uri)
+          .then(() => this.has_sent_verification = true)
+          .finally(() => this.is_loading = false)
+      },
+      resetPin() {
+        let { code, pin1, pin2 } = this
+        let params = { code, pin1, pin2 }
+
+        this.is_loading = true
+        let uri = utils.api_endpoint('/pin-reset/complete')
+        $http.post(uri, params)
+          .then(({data}) => {
+            let { status } = data
+
+            if(status === 'ok') {
+              this.close()
+              return Notify.success(
+                'Successful',
+                data.msg,
+                () => this.close()
+              )
+            }
+
+            if(status === 'error') {
+              return Notify.error(
+                'Error',
+                data.data.msg
+              )
+            }
+
+            Notify.connectionError()
+          })
+          .catch(() => Notify.connectionError())
+          .finally(() => this.is_loading = false)
+      }
+    }">
+    <div class="mt-6 space-y-4">
+      <div>
+        <template x-if="has_sent_verification && !is_loading">
+          <div class="p-3 text-sm rounded-lg bg-blue-50">
+            Verification code has been sent to your email address.
+          </div>
+        </template>
+        <template x-if="!has_sent_verification && !is_loading">
+          <div class="flex p-3 text-sm bg-yellow-100 rounded-lg gap-x-4">
+            <div>
+              We will need to send a verification code to confirm it's you.
+            </div>
+            <div class="">
+              <a
+                href=""
+                @click.prevent="requestVerificationCode"
+                class="block w-full font-medium underline">
+                Send Code
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+      <div>
+        <label
+          for="code"
+          class="text-sm text-gray-400">
+          Verification code:
+        </label>
+        <input
+          id="code"
+          x-model="code"
+          type="password"
+          placeholder="Enter code"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          @keyup="$el.type = 'text'"
+          required>
+      </div>
+      <div>
+        <label
+          for="reset-new-pin"
+          class="text-sm text-gray-400">
+          New Pin:
+        </label>
+        <input
+          id="reset-new-pin"
+          x-model="pin1"
+          type="password"
+          placeholder="Enter new pin"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          maxlength="4"
+          pattern="[0-9]{4}"
+          required>
+      </div>
+      <div>
+        <label
+          for="reset-confirm-pin"
+          class="text-sm text-gray-400">
+          Confirm Pin:
+        </label>
+        <input
+          id="reset-confirm-pin"
+          x-model="pin2"
+          type="password"
+          placeholder="Confirm pin"
+          class="w-full h-12 px-3 mt-1 border rounded-lg outline-none ring-atg-light focus:ring-2"
+          maxlength="4"
+          pattern="[0-9]{4}"
+          required>
+      </div>
+      <div class="flex justify-end pt-4">
+        <button
+          type="submit"
+          class="w-full px-5 py-3 text-white duration-500 rounded-lg lg:w-auto bg-atg"
+          :class="is_loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-600'">
+          <template x-if="is_loading">
+            <span>
+              <i class="fa fa-spin fa-circle-notch"></i> Please wait...
+            </span>
+          </template>
+          <template x-if="!is_loading">
+            <span>Reset Pin</span>
+          </template>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>  </div>
+</div>    </div>
+  </div>
+  
+</div>
+    </div>
+    
+    
+<div
+  class="fixed inset-0 z-30 bg-black bg-opacity-60"
+  :class="sidebar_open ? '' : 'hidden'"
+  @click.prevent="sidebar_open = false" x-cloak></div>
+
+<div
+  x-cloak
+  x-data="{
+    is_copying: false,
+    current_view: 1,
+    views: {
+      INDEX: 1,
+      ATM_FUND: 2
+    },
+    close() {
+      this.current_view = this.views.INDEX
+      this.is_fund_modal_open = false
+    },
+    goto(uri) {
+      this.close()
+      location.href = uri
+    },
+    copyAccountNumber(acn) {
+      navigator.clipboard.writeText(acn).then(() => {
+        iziToast.success({
+          message: 'Account number copied',
+          position: 'topCenter',
+          timeout: 3000
+        })
+      })
+    }
+  }"
+  $ref="container"
+  class="fixed inset-0 z-50 flex items-end justify-center bg-black lg:shadow-xl lg:items-center bg-opacity-70"
+  x-show="is_fund_modal_open"
+  x-transition
+  x-transition.opacity>
+  <div class="w-full p-10 bg-white rounded-lg lg:w-3/12">
+    <div
+      :class="current_view == views.INDEX ? '' : 'hidden'">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-2xl font-semi-bold">
+            Add Funds
+          </div>
+          <div class="text-sm font-light text-gray-500">
+            How do you want to topup?
+          </div>
+        </div>
+        <div>
+          <a
+            class="text-gray-500"
+            @click.prevent="close"
+            href="">
+            <i class="fa fa-times-circle"></i>
+          </a>
+        </div>
+      </div>
+                  <div>
+        <div class="flex items-center justify-between px-5 py-3 mt-5 bg-gray-100 border border-gray-300 rounded-lg">
+          <div>
+            <div class="text-xl font-semibold">
+              2056667112
+            </div>
+            <div class="text-gray-600">
+              Kuda Bank
+            </div>
+          </div>
+          <div>
+            <a
+              @click.prevent="copyAccountNumber(2056667112)"
+              href="">
+              <i class="text-gray-600 fa fa-copy"></i>
+            </a>
+          </div>
+        </div>
+        <div class="mt-2">
+          <div
+            :class="is_copying ? '' : 'hidden'"
+            class="text-xs text-atg">Account number copied...</div>
+          <div class="text-xs text-gray-600">
+            Transfer to this account to fund your wallet.
+          </div>
+        </div>
+      </div>
+            <div>
+  
+      </div>
+      <ul class="mt-8 border-t">
+        <li class="py-5 border-b border-gray-200">
+          <a 
+            href=""
+            @click.prevent="goto('https://aimtoget.com/app/airtime/fund')">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <span class="text-atg">Airtime</span>
+                </div>
+                <div class="text-sm font-light text-gray-600">
+                  Convert your airtime to cash
+                </div>
+              </div>
+              <div>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="py-5 border-b border-gray-200">
+          <a
+            href=""
+            @click.prevent="current_view = views.ATM_FUND">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <span class="text-atg">ATM Card</span>
+                </div>
+                <div class="text-sm font-light text-gray-600">
+                  Fund your wallet using ATM Card
+                </div>
+              </div>
+              <div>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="py-5 border-b border-gray-200">
+          <a
+            href=""
+            @click.prevent="openNairaPin">
+            <div class="flex items-center justify-between">
+              <div>
+                <div>
+                  <span class="text-atg">Naira Pin</span>
+                </div>
+                <div class="text-sm font-light text-gray-600">
+                  Load Aimtoget wallet with naira-pin
+                </div>
+              </div>
+              <div>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      :class="current_view === views.ATM_FUND ? '' : 'hidden'">
+      <div class="flex items-center justify-between">
+        <div class="text-sm">
+          <a
+            class="inline-block px-2 py-1 bg-gray-100 border rounded-lg"
+            @click.prevent="current_view = views.INDEX"
+            href="">
+            <i class="fa fa-angle-left"></i>
+            <span class="ml-1 text-gray-600">Back</span>
+          </a>
+        </div>
+        <div>
+          <a
+            class="text-gray-500"
+            @click.prevent="close"
+            href="">
+            <i class="fa fa-times-circle"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-5">
+        <div class="text-xl lg:text-2xl font-semi-bold">
+          ATM Card
+        </div>
+        <div class="text-xs font-light text-gray-500 lg:text-sm">
+          Add funds with ATM Card
+        </div>
+      </div>
+      <div class="pt-10">
+        <form
+          action=""
+          method="post"
+          @submit.prevent="process"
+          x-data="{
+            cards: [],
+            new_card_id: 'new_card',
+            selected_card: {},
+            amount: '',
+            key: '',
+            reference: '',
+            is_loading: false,
+            has_loaded_cards: false,
+            process() {
+
+              if(!this.reference) {
+                return this.prepare()
+              }
+
+              if(!this.has_loaded_cards) {
+                return
+              }
+
+              let { selected_card, new_card_id } = this
+
+              if(selected_card.id === new_card_id) {
+                return this.openPayment()
+              }
+              
+              this.chargeSavedCard()
+            },
+            button_disabled() {
+              if(this.amount < 1) {
+                return true
+              }
+
+              if(this.is_loading) {
+                return true
+              }
+
+              if(this.cards.length && !this.selected_card) {
+                return true
+              }
+
+              return false
+            },
+            reset() {
+              this.key = '',
+              this.reference = '',
+              this.is_loading = false
+              this.amount = ''
+            },
+            prepare() {
+              this.is_loading = true
+              let { amount } = this
+              let uri = utils.api_endpoint('/fund-atm/reference')
+              
+              $http.post(uri, {amount})
+                .then(({data}) => {
+                  let { status } = data
+
+                  if(status === 'error') {
+                    this.is_loading = false
+                    return Notify.error(
+                      data.msg,
+                      data.data.msg
+                    )
+                  }
+
+                  if(status === 'ok') {
+                    let { amount, email, rave, reference } = data.data
+                    this.email = email
+                    this.reference = reference
+                    this.key = rave.public_key
+                    return this.loadSavedCards()
+                  }
+                })
+                .catch(err => {
+                  console.log(err)
+                  this.is_loading = false
+                  Notify.connectionError()
+                })
+            },
+            loadSavedCards() {
+              
+              if(this.cards.length) {
+                return
+              }
+
+              let uri = utils.api_endpoint('/me/cards')
+              this.is_loading = true
+
+              $http.get(uri)
+                .then(({data}) => {
+                  let { status } = data
+
+                  if(status === 'ok') {
+                    this.is_loading = false
+                    this.cards = data.data.cards
+                    this.has_loaded_cards = true
+                    return
+                  }
+                  
+                  this.openPayment()
+                })
+                .finally(() => {
+                  has_loaded_cards = true
+                })
+            },
+            chargeSavedCard() {
+              let uri = utils.api_endpoint('/fund/card')
+              let { reference, selected_card } = this
+              let params = {
+                reference,
+                card: selected_card.id
+              }
+
+              this.is_loading = true
+              $http.post(uri, params)
+                .then(({data}) => {
+                  let { status } = data
+
+                  if(status === 'processing') {
+                    return this.verifyCardChargeTxn()
+                  }
+
+                  this.is_loading = false
+
+                  if(status === 'ok') {
+                    return Notify.success(
+                      data.msg,
+                      data.data.msg,
+                      () => {
+                        this.reset()
+                        this.close()
+                      }
+                    )
+                  }
+
+                  if(status === 'error') {
+                    return Notify.error(
+                      data.msg,
+                      data.data.msg
+                    )
+                  }
+
+                  Notify.connectionError()
+                })
+                .catch(() => {
+                  this.is_loading = false
+                  Notify.connectionError()
+                })
+            },
+            verifyCardChargeTxn(retry_count = 1) {
+
+              if(retry_count > 3) {
+                return Notify.warning(
+                  'An error occured',
+                  'Unable to confirm transaction. Kindly contact support for assistance',
+                  () => this.close()
+                )
+              }
+              
+              this.is_loading = true
+              let { reference } = this
+              let uri = utils.api_endpoint(`/me/transactions/${reference}`)
+
+              $http.get(uri)
+                .then(({data}) => {
+                  let { status } = data.data
+                  let status_name = status.name.toLowerCase()
+
+                  if(status_name === 'pending') {
+                    return setTimeout(() => {
+                      this.verifyCardChargeTxn(retry_count + 1)
+                    }, 3000)
+                  }
+
+                  if(status_name === 'ok') {
+                    return Notify.success(
+                      'Success',
+                      `Your wallet has been successfully funded with ${data.data.amount_formatted}`,
+                      () => this.close()
+                    )
+                  }
+
+                  if(status_name === 'failed') {
+                    return Notify.success(
+                      'Failed',
+                      `We were unable to charge your card. Please check card and try again later`,
+                      () => this.close()
+                    )
+                  }
+
+                  this.is_loading = false
+                  Notify.connectionError()
+                })
+                .catch(() => Notify.connectionError())
+            },
+            openPayment() {
+
+              let { key, email, amount, reference } = this
+              let context = this
+              this.is_loading = true
+
+              let setup = getpaidSetup({
+                PBFPubKey: key,
+                customer_email: email,
+                amount: amount,
+                currency: 'NGN',
+                txref: reference,
+                onclose() {
+                  context.cancelPayment()
+                },
+                callback({tx}) {
+                  this.is_loading = true
+                  let { txRef } = tx
+                  setTimeout(() => context.verifyPayment(txRef), 3500)
+                  setup.close()
+                }
+              })
+            },
+            cancelPayment() {
+              this.close()
+              let { reference } = this
+              let uri = utils.api_endpoint(`/fund/cancel/${reference}`)
+              $http.post(uri)
+                .then(() => {
+                })
+                .finally(() => {
+                  this.reset()
+                })
+            },
+            verifyPayment(ref) {
+              let uri = utils.api_endpoint(`/fund/verify/${ref}`)
+              this.is_loading = true
+
+              $http.post(uri)
+                .then(({data}) => {
+                    let { status } = data
+
+                    if(status === 'ok') {
+                      return Notify.success(
+                        data.msg,
+                        data.data.msg
+                      )
+                    }
+
+                    if(status === 'error') {
+                      return Notify.error(
+                        data.msg,
+                        data.data.msg
+                      )
+                    }
+
+                    Notify.connectionError()
+                })
+                .catch(() => Notify.connectionError())
+                .finally(() => this.is_loading = false)
+            }
+          }">
+          <div class="space-y-5">
+            <div>
+              <label
+                class="text-gray-600"
+                for="fund-amount">
+                Amount:
+              </label>
+              <input
+                type="number"
+                class="w-full h-12 px-2 mt-1 border rounded-lg outline-none focus:ring ring-atg-light"
+                placeholder="Enter amount"
+                x-model="amount"
+                id="fund-amount"
+                :disabled="is_loading">
+            </div>
+
+            <template x-if="cards.length">
+              <div class="pt-4 border-t">
+                <div class="text-sm font-medium lg:text-gray-600">
+                  Choose A Card:
+                </div>
+                <ul class="mt-3 space-y-3">
+                  <template x-for="card in cards">
+                  <li>
+                    <a
+                      @click.prevent="selected_card = card"
+                      href=""
+                      class="flex items-center justify-between p-3 text-xs border rounded-lg lg:text-sm bg-gray-50"
+                      :class="selected_card.id == card.id ? 'ring-2 ring-atg-light' : ''">
+                      <div class="flex gap-x-6">
+                        <div>
+                          <i
+                            class="fa fa-circle"
+                            :class="selected_card.id == card.id ? 'text-atg' : 'text-gray-500'"></i>
+                        </div>
+                        <div
+                          class="text-gray-600"
+                          x-text="card.pan"></div>
+                      </div>
+                      <div>
+                        <img
+                          class="h-4"
+                          :src="card.image_url"
+                          alt="">
+                      </div>
+                    </a>
+                  </li>
+                  </template>
+                  <li>
+                    <a
+                      @click.prevent="selected_card = {id: new_card_id}"
+                      href=""
+                      class="flex items-center justify-between p-3 text-xs border rounded-lg lg:text-sm bg-gray-50"
+                      :class="selected_card.id == new_card_id ? 'ring-2 ring-atg-light' : ''">
+                      <div class="flex gap-x-6">
+                        <div>
+                          <i
+                            class="fa fa-circle"
+                            :class="selected_card.id == new_card_id ? 'text-atg' : 'text-gray-500'"></i>
+                        </div>
+                        <div class="text-gray-600">Use New Card</div>
+                      </div>
+                      <div>
+                        <i class="fa fa-credit-card"></i>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </template>
+
+            <div>
+              <button
+                :disabled="button_disabled()"
+                class="w-full p-3 text-white rounded-lg bg-atg"
+                :class="button_disabled() ? 'opacity-70 cursor-not-allowed' : ''">
+                <template x-if="is_loading">
+                  <span>
+                    <i class="fa fa-spin fa-circle-notch"></i>
+                    Please wait..
+                  </span>
+                </template>
+                <template x-if="!is_loading">
+                  <span>
+                    Continue
+                  </span>
+                </template>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script
+  async
+  type="text/javascript"
+  src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>  </main>
+</body>
+
+</html>
