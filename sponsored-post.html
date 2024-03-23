@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#ab2923">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="csrf-token" content="f849f83a7bc6fa24c1ce39fb6761715b963eba52">
+  <meta name="csrf-token" content="1c13814e2dfc19122f8e5f242c1a69039d8daf3e">
   <meta name="google-site-verification" content="c_LAXHEHxcNq1-aJO5h6KHVhmuVz7pgsfx9HbbN7BXg" />
     <meta name="description"
     content="Fastest and easiest way to convert your airtime to cash. Accept payments for your business and services today using airtime." />
@@ -16,14 +16,13 @@
     <meta name="keywords"
     content="Easiest way to convert airtime to cash in Nigeria, Make payment with airtime, Send and recieve payment in Nigeria with airtime, airtime is money, buy cheap data, MTN, Glo, 9mobile, Airtel, make payment for Gotv, Dstv" />
     <meta property="og:image" content="https://aimtoget.com/assets/images/new/favicon.png">
-  <title>My Dashboard | Paytech
+  <title>Transfer Funds
 </title>
   <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/styles.css?v=2.5.6998 "/>
   <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2.5/fonts.css?v=2.5.6998 "/>
   <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/iziToast.min.css?v=2.5.6998 "/>
   <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/sweetalert2.min.css?v=2.5.6998 "/>
   <link rel="stylesheet" href="https://aimtoget.com/assets/fontawesome-free-6.1.2-web/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://aimtoget.com/assets/images/new/atg-favicon.png">
   <link rel="stylesheet" href="assets/fontawesome-free-6.1.2-web/css/all.min.css">
   <script src="https://aimtoget.com/assets/js/v2/alpine.persist.min.js" defer></script>
@@ -94,8 +93,17 @@
               </span>
             </a>
           </li>
-          
-        </ul>
+          <li>
+            <a
+              class="block duration-300 hover:text-primary-main"
+              href="transaction.html">
+              <i class="far fa-list-alt"></i>
+              <span class="inline-block ml-1">
+                Transaction History
+              </span>
+            </a>
+          </li>
+                  </ul>
       </li>
 
       <li>
@@ -271,437 +279,56 @@
         </div>
       </div>
     </header>
-
-        <div
-      class="container relative z-0 px-5 pb-10 mx-auto mt-16 lg:mt-0">
-      <section class="mt-12 lg:mt-10">
-  <h1 class="text-xl lg:text-2xl">
-    My <span class="font-medium">Dashboard</span>
-  </h1>
-  
-  <div class="overflow-x-scroll">
-    <div
-      class="flex mt-3 gap-x-5 lg:grid lg:mt-10 lg:grid-cols-8 lg:gap-x-10">
-      <div
-        class="grid min-w-[80%] lg:w-full grid-cols-1 py-2 text-gray-300 rounded-lg shadow border-primary-100 lg:shadow-none lg:p-0 lg:gap-y-3 lg:col-span-5 lg:grid-cols-3 bg-black">
-        <div>
-          <div class="px-5 lg:px-10 lg:py-7">
-            <div class="hidden lg:block">
-              <div
-                class="inline-flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-100 rounded-full">
-                <i class="text-xl fa fa-wallet"></i>
-              </div>
-            </div>
-            <div
-              class="mt-4 text-xs text-gray-400 lg:text-base">
-              Wallet Balance:
-            </div>
-            <div
-              x-init="() => {
-                $watch('show_balance', value => update())
-              }"
-              x-data="{
-                show_balance: $persist(false).as('atg_balance_show'),
-                update() {
-                  window.dispatchEvent(
-                    new Event('show_hide_balance')
-                    )
-                }
-              }"
-              class="flex items-center space-x-2 text-2xl font-medium lg:text-3xl">
-              <div>
-                ₦
-                <span
-                  x-cloak
-                  :class="show_balance ? '' : 'hidden'">
-                  19,920.00
-                </span>
-                <span
-                  x-cloak
-                  :class="show_balance ? 'hidden' : ''">
-                  *****
-                </span>
-                <a
-                  @click.prevent="show_balance = !show_balance"
-                  href=""
-                  class="text-sm text-gray-600">
-                  <i
-                    class="fa"
-                    :class="show_balance ? 'fa fa-eye-slash' : 'fa-eye'"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hidden lg:block lg:border-r lg:border-gray-700">
-          <div class="px-10 lg:py-7">
-            <div>
-              <div
-                class="inline-flex items-center justify-center w-12 h-12 text-gray-600 bg-gray-100 rounded-full">
-                <i class="text-xl fa fa-list"></i>
-              </div>
-            </div>
-            <div
-              class="mt-4 text-xs text-gray-400 lg:text-base">
-              Task Completed:
-            </div>
-            <div class="text-xl font-medium lg:text-3xl">
-              158
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="h-full px-5 py-4 lg:px-10 lg:p-0 lg:items-center lg:justify-center lg:flex gap-y-4">
-            <div class="flex space-x-5 text-xs lg:text-base lg:space-x-0 lg:space-y-4 lg:block">
-              <div>
-                <a
-                  href=""
-                  @click.prevent="is_fund_modal_open = true"
-                  class="block px-3 py-2 text-center text-white duration-300 rounded lg:w-32 hover:bg-primary-700 bg-primary-600">
-                  <i class="fab fa-pushed"></i>
-                  <span class="mr-1">
-                    Earnings
-                  </span>
-                </a>
-              </div>
-              <div>
-                <a
-                  href="withdraw.html"
-                  class="block px-3 py-2 text-center text-gray-800 duration-300 bg-gray-200 rounded lg:w-32 hover:bg-gray-100">
-                  <i class="fa fa-arrow-right"></i>
-                  <span class="mr-1">
-                    Withdraw
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div style="margin-left: 5px; margin-top: -4%;" class="py-20">
+        <h1 class="text-2xl font-bold leading-snug lg:text-6xl lg:leading-[1.2]">
+          The easiest way to make <span class="text-atg">money</span> from home.
+        </h1>
+        <p class="mt-6">
+          Start your journey to earning money online with Paytech today! Join us and 
+          discover endless opportunities for financial growth and success.
+        </p>
       </div>
-      <div
-        class="min-w-[80%] border bg-gray-100 space-y-3 p-5 rounded-lg lg:col-span-3">
-        <div class="flex text-sm lg:hidden gap-x-4">
-          <span class="font-light text-gray-700">
-            Total Earnings:
-          </span>
-          <div class="font-medium">
-            158.
-          </div>
-        </div>
-        <div class="border-t lg:hidden"></div>
-
-        <div class="grid grid-cols-2 lg:gap-x-10">
-                              <div class="text-sm lg:text-base">
-            <div class="text-sm font-light text-gray-700">
-              Referal Earnings:
-            </div>
-            <div class="font-medium">
-              ₦200,000
-            </div>
-          </div>
-                    <div class="hidden text-sm lg:block lg:text-base">
-            <div class="text-sm text-gray-700">
-              Total Referals:
-            </div>
-            <div class="font-medium">
-              56
-            </div>
-          </div>
-                  </div>
-
+    <div style="width: 98%; margin-left: 10px; margin-top: -4%;" class="grid grid-cols-1 gap-8 mt-20 lg:gap-14 lg:grid-cols-3">
         <div
-          x-init="() => {
-            console.log(calculate_pct())
-          }"
-          x-data="{
-            calculate_pct() {
-              return (0 / 200000) * 100
-            }
-          }">
-          <div class="w-full h-2 overflow-hidden bg-gray-200 rounded-lg lg:h-3 lg:mt-8">
-            <div
-              class="h-full bg-primary-600"
-              :style="`width: ${calculate_pct()}%`"
-              x-cloak></div>
-          </div>
-        </div>
-        <div class="hidden mt-3 text-sm font-light text-right lg:block">
-          [<a
-            class="font-medium hover:underline text-atg"
-            href="https://aimtoget.com/app/upgrade/levels">
-            Copy Link
-          </a>]
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="mt-10 lg:mt-20">
-  <h2 class="text-lg text-gray-700">
-    What will you like to do?
-  </h2>
-  <div class="grid grid-cols-2 gap-6 mt-6 text-sm lg:grid-cols-5 2xl:gap-10">
-    <div>
-      <a href="perform-task.html">
-        <div
-          class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
+          class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow lg:p-10 hover:-translate-y-2 hover:bg-gray-50">
           <div>
-            <div class="font-medium text-primary-main lg:font-normal">
-              <span class="block lg:inline">Task</span>
-            </div>
-            <p class="hidden mt-1 text-xs text-gray-500 lg:block">
-              Instantly convert your tasks to cash easily.
-            </p>
+            <img style="width: 100%; border-radius: 10px;" class="w-600 h-400" src="ideas.png" alt="Airtime to Cash">
           </div>
-          <div>
-            <i class="fa fa-angle-right"></i>
+          <div class="mt-5 font-bold text-atg">
+            Sponsored Post  <b>[ ₦50 ]</b>
           </div>
-          <div class="absolute text-gray-600 opacity-5 -right-5 -bottom-5">
-            <i class="fa fa-6x fa-crosshairs"></i>
+          <div class="mt-4 font-light">
+            Receive your money to your prefered bank account instantly.
           </div>
-        </div>
-      </a>
-    </div>
-    
-    <div>
-      <a href="withdraw.html">
-        <div
-          class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
-          <div>
-            <div class="font-medium text-primary-main lg:font-normal"> 
-              <span class="block lg:inline">Withdraw</span>
-            </div>
-            <p class="hidden mt-1 text-xs text-gray-500 lg:block">
-              Withdraw your earnings to your personal bank account.
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-angle-right"></i>
-          </div>
-          <div class="absolute text-gray-600 opacity-5 -right-5 -bottom-5">
-            <i class="fas fa-6x fa-wifi"></i>
-          </div>
-        </div>
-      </a>
-    </div>
-    
-    <div>
-      <a href="sponsored-post.html">
-        <div
-          class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
-          <div>
-            <div class="font-medium text-primary-main lg:font-normal">
-              
-              <span class="block lg:inline">Sponsored Post</span>
-            </div>
-            <p class="hidden mt-1 text-xs text-gray-500 lg:block">
-              Earn by performing sponsored tasks.
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-angle-right"></i>
-          </div>
-          <div class="absolute text-gray-600 opacity-5 -right-5 -bottom-5">
-            <i class="fas fa-6x fa-signal"></i>
-          </div>
-        </div>
-      </a>
-    </div>
-    
-    <div>
-      <a href="spin.html">
-        <div
-          class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
-          <div>
-            <div class="font-medium text-primary-main lg:font-normal">
-              <span class="block lg:inline">Spin and Win</span>
-            </div>
-            <p class="hidden mt-1 text-xs text-gray-500 lg:block">
-              Make money with free spin and win with no fees.
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-angle-right"></i>
-          </div>
-          <div class="absolute text-gray-600 opacity-5 -right-5 -bottom-5">
-            <i class="fas fa-6x fa-money-bill-wave-alt"></i>
-          </div>
-        </div>
-      </a>
-    </div>
-    
-    <div>
-      <a href="#">
-        <div
-          class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
-          <div>
-            <div class="font-medium text-primary-main lg:font-normal">
-              Make Money
-              <span class="block lg:inline">(Referral)</span>
-            </div>
-            <p class="hidden mt-1 text-xs text-gray-500 lg:block">
-              Refer your family and friends & earn.
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-angle-right"></i>
-          </div>
-          <div class="absolute text-gray-600 opacity-5 -right-5 -bottom-5">
-            <i class="fas fa-6x fa-users"></i>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <div>
-      <a href="#">
-        <div
-          class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
-          <div>
-            <div class="font-medium text-primary-main lg:font-normal">
-              Contact
-              <span class="block lg:inline">Admin</span>
-            </div>
-            <p class="hidden mt-1 text-xs text-gray-500 lg:block">
-              Refer your family and friends & earn.
-            </p>
-          </div>
-          <div>
-            <i class="fa fa-angle-right"></i>
-          </div>
-          <div class="absolute text-gray-600 opacity-5 -right-5 -bottom-5">
-            <i class="fas fa-6x fa-users"></i>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="mt-10 lg:mt-20">
-  <div class="grid grid-cols-1 lg:grid-cols-7 gap-x-10">
-    <div
-      class="lg:col-span-4"
-      x-init="load"
-      x-data="{
-        is_link: true,
-        is_loading: true,
-        load_error: false,
-        transactions: [],
-        getTxnColor({ status }) {
-          let colors = {
-            Pending: 'text-yellow-600',
-            Processing: 'text-yellow-600',
-            Success: 'text-green-600',
-            Failed: 'text-red-600',
-            Reversed: 'text-orange-600'
-          }
-    
-          return colors[status.name]
-        },
-        load() {
-          let uri = utils.api_endpoint('/me/transactions?limit=6')
-          $http.get(uri).then(res => {
-            this.transactions = res.data.data.items
-          })
-          .catch(err => {
-            this.load_error = true
-          })
-          .finally(() => this.is_loading = false)
-        }
-      }">
-      <div class="flex items-center justify-between">
-        <div class="font-semibold text-gray-700">
-          Notification
-        </div>
-        <div>
-          <a
-            href="https://aimtoget.com/app/transactions"
-            class="inline-flex px-3 py-1 text-xs font-medium duration-300 rounded bg-primary-50 hover:bg-primary-600 hover:text-white border-primary-600 text-primary-600">
-            &raquo;
-            See All
-          </a>
-        </div>
-      </div>
-
-      <div class="mt-5 space-y-3">
-        <div class="head">
-          <div class="hd-text">
-            <img class="act-img" src="tasks.jpeg" alt="">
-          <h3>Refer & Earn ₦250 </h3>
-          </div>
-            <p class="sub-text">Copy your referral link below and refer your firends and families. The more people you refer, the more money you earn.</p>
-            <a style="border-radius: 0; margin-left: 55%; padding: 5px;" href="task-details.html"
+          <br>
+          <a href="task-details.html"
             class="inline-flex items-center justify-between py-3 text-sm tracking-wide text-white duration-300 bg-black rounded-lg hover:scale-105 hover:bg-gray-900 px-7">
             <div>
-              <div>Copy Referal Link</div>
+              <div class="font-bold">Read more...</div>
             </div>
           </a>
         </div>
-        <div style="background-color: blueviolet;" class="head">
-          <div class="hd-text">
-            <img class="act-img" src="tasks.jpeg" alt="">
-          <h3>Join Facebook And Telegram Groups</h3>
+        <div
+          class="relative p-6 duration-500 bg-gray-100 rounded-lg shadow lg:p-10 hover:-translate-y-2 hover:bg-gray-50">
+          <div>
+            <img style="width: 100%; border-radius: 10px;" class="w-600 h-400" src="internet.png" alt="Airtime to Cash">
           </div>
-            <p class="sub-text">Join below our telegram and facebook groups for latest updates about monieflow technology.</p>
-            <a style="border-radius: 0; margin-left: 55%; padding: 5px;" href="task-details.html"
+          <div class="mt-5 font-bold text-atg">
+            Sponsored Post  <b>[ ₦50 ]</b>
+          </div>
+          <div class="mt-4 font-light">
+            Receive your money to your prefered bank account instantly.
+          </div>
+          <br>
+          <a href="task-details.html"
             class="inline-flex items-center justify-between py-3 text-sm tracking-wide text-white duration-300 bg-black rounded-lg hover:scale-105 hover:bg-gray-900 px-7">
             <div>
-              <div>Copy Referal Link</div>
+              <div class="font-bold">Read more...</div>
             </div>
           </a>
         </div>
+        
       </div>
-      
-        <template x-if="!is_loading && transactions.length">
-          <template x-for="transaction in transactions">
-            <div
-  class="p-3 text-sm rounded-lg bg-gray-50">
-  <a
-    href=""
-    @click.prevent="is_link ? location.href = 'https://aimtoget.com/app/transactions?o=' + transaction.reference_code : selected_transaction = transaction">
-    <div class="flex items-center justify-between">
-      <div class="flex">
-        <div class="flex items-center">
-          <div
-            class="flex items-center justify-center w-8 h-8 mr-4 bg-gray-200 rounded-full"
-            :class="transaction.action_type === 'Dr' ? 'text-red-600' : 'text-green-600'">
-            <i
-              class="rotate-45 fa"
-              :class="transaction.action_type === 'Dr' ? 'fa-arrow-left' : 'fa-arrow-right'"></i>
-          </div>
-        </div>
-        <div>
-          <div x-text="transaction.type"></div>
-          <div class="mt-1 text-xs font-light">
-            <span
-              class="text-gray-500"
-              x-text="transaction.date"></span>
-              &middot;
-            <span
-              class="font-normal text-gray-500"
-              :class="getTxnColor(transaction)"
-              x-text="transaction.status.name"></span>
-          </div>
-        </div>
-      </div>
-      <div
-        x-text="transaction.amount_formatted"
-        class="font-medium text-gray-600 lg:text-base"></div>
-    </div>
-  </a>
-</div>          </template>
-        </template>
-      </div>
-    </div>
-    <div class="hidden lg:col-span-3 lg:flex lg:justify-end">
-      <div class="relative m-5 overflow-hidden rounded-lg lg:w-8/12">
-        <img src="https://aimtoget.com/assets/uploads/2d31ac6f286dd6900937.jpg" alt="">
-      </div>
-    </div>
-  </div>
-</section>
     </div>
     
     
@@ -1217,16 +844,11 @@
 
             <div>
               <button
-                :disabled="button_disabled()"
+                
                 class="w-full p-3 text-white rounded-lg bg-atg"
-                :class="button_disabled() ? 'opacity-70 cursor-not-allowed' : ''">
-                <template x-if="is_loading">
-                  <span>
-                    <i class="fa fa-spin fa-circle-notch"></i>
-                    Please wait..
-                  </span>
-                </template>
-                <template x-if="!is_loading">
+                >
+                
+                <template>
                   <span>
                     Continue
                   </span>
