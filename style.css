@@ -52,7 +52,7 @@ input::placeholder{
 .head{
     float: left;
     background-color: brown;
-    padding: 13px;
+    padding: 10px;
     border-radius: 7px;
     color: white;
 }
@@ -68,4 +68,5 @@ input::placeholder{
 }
 .sub-text{
     margin-left: 35px;
+    font-size: 13px;
 }
