@@ -73,7 +73,7 @@
           </a>
         </div>
         <div>
-          <a href="https://aimtoget.com/app/logout">
+          <a href="login.html">
             <i class="fa fa-power-off"></i>
           </a>
         </div>
@@ -86,24 +86,15 @@
           <li>
             <a
               class="block duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app">
+              href="dashboard.html">
               <i class="fas fa-tachometer-alt"></i>
               <span class="inline-block ml-1">
                 Dashboard
               </span>
             </a>
           </li>
-          <li>
-            <a
-              class="block duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/transactions">
-              <i class="far fa-list-alt"></i>
-              <span class="inline-block ml-1">
-                Transaction History
-              </span>
-            </a>
-          </li>
-                  </ul>
+          
+        </ul>
       </li>
 
       <li>
@@ -113,30 +104,30 @@
         <ul class="mt-2 space-y-3">
           <li>
             <a
-              href=""
+              href="sponsored-post.html"
               @click.prevent="sidebar_open = false; is_fund_modal_open = true"
               class="duration-300 hover:text-primary-main">
               <i class="fab fa-pushed"></i>
               <span class="inline-block ml-1">
-                Fund Wallet
+                Sponsored Post
               </span>
             </a>
           </li>
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/airtime/fund">
-              <i class="fas fa-crosshairs"></i>
+              href="perform-task.html">
+              <i class="fas fa-tasks"></i>
               <span class="inline-block ml-1">
-                Airtime To Cash
+                Perform Task
               </span>
             </a>
           </li>
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/withdraw">
-              <i class="fa fa-university"></i>
+              href="withdraw.html">
+              <i class="fa fa-wallet"></i>
               <span class="inline-block ml-1">
                 Withdraw Funds
               </span>
@@ -145,10 +136,20 @@
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/transfer">
-              <i class="fa fa-arrow-right"></i>
+              href="top-earners.html">
+              <i class="fa fa-users"></i>
               <span class="inline-block ml-1">
-                Transfer Funds
+                Top Earners
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="spin.html">
+              <i class="fa fa-spinner"></i>
+              <span class="inline-block ml-1">
+                Spin and Win
               </span>
             </a>
           </li>
@@ -163,47 +164,24 @@
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/airtime">
-              <i class="fas fa-signal"></i>
+              href="settings.html">
+              <i class="fas fa-bank"></i>
               <span class="inline-block ml-1">
-                Airtime Topup
+                Update Bank
               </span>
             </a>
           </li>
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/data">
-              <i class="fas fa-wifi"></i>
+              href="support.html">
+              <i class="fas fa-headphones"></i>
               <span class="inline-block ml-1">
-                Data Topup
+                Support
               </span>
             </a>
           </li>
-          <li>
-            <a
-              class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/bills">
-              <i class="fas fa-money-bill-wave-alt"></i>
-              <span class="inline-block ml-1">
-                Pay Bills
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              class="duration-300 hover:text-primary-main"
-              href=""
-              @click.prevent="openNairaPin">
-              <i class="fas fa-credit-card"></i>
-              <span class="inline-block ml-1">
-                Naira Pin
-              </span>
-            </a>
-          </li>
-        </ul>
-      </li>
-
+          
       <li>
         <div class="font-medium text-gray-500">
           Settings
@@ -212,7 +190,7 @@
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/settings">
+              href="settings.html">
               <i class="fas fa-cog"></i>
               <span class="inline-block ml-1">
                 Account Settings
@@ -222,7 +200,7 @@
           <li>
             <a
               class="duration-300 hover:text-primary-main"
-              href="https://aimtoget.com/app/logout">
+              href="login.html">
               <i class="fas fa-power-off"></i>
               <span class="inline-block ml-1">
                 Logout
@@ -233,7 +211,7 @@
       </li>
     </ul>
   </aside>
-  <main class="lg:ml-72">
+  <main style="font-weight: 600;" class="lg:ml-72">
     <header class="fixed inset-x-0 top-0 z-10 px-5 py-3 bg-white border-b lg:z-0 lg:relative">
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-x-5">
@@ -378,14 +356,7 @@
                   09063711636
                 </div>
               </div>
-              <div class="grid lg:grid-cols-2">
-                <div>
-                  BVN:
-                </div>
-                <div class="font-light text-gray-600 lg:flex lg:items-center">
-                                    *******4225
-                                  </div>
-              </div>
+              
                                           <div class="grid lg:grid-cols-2">
                 <div>
                   Bank:
@@ -394,16 +365,7 @@
                   ******8169 (Keystone bank)
                 </div>
               </div>
-                            <div class="grid lg:grid-cols-2">
-                <div>
-                  Level:
-                </div>
-                <div class="font-light text-gray-600 lg:flex lg:items-center">
-                  Level 2
-                  (<a
-                    class="font-medium hover:underline text-atg"
-                    href="https://aimtoget.com/app/upgrade/levels">Upgrade</a>)
-                </div>
+                            
               </div>
             </div>
           </div>
@@ -650,6 +612,73 @@
                     @click.prevent="reset_pin_modal = true"
                     class="text-primary-600 hover:underline">
                     Reset transaction pin
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div>
+        <div>
+          <div class="pb-3 text-2xl text-gray-400 border-b border-gray-100">
+            Account Settings
+          </div>
+    
+          <div class="lg:w-7/12">
+            <div class="mt-10 space-y-10">
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Update Full Name:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Change your old name to a new one
+                  </div>
+                </div>
+                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
+                  <a
+                    href=""
+                    class="text-primary-600 hover:underline"
+                    @click.prevent="show_password_modal = !show_password_modal">
+                    Change your name
+                  </a>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Update Email:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Change your old email to a new one
+                  </div>
+                </div>
+                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
+                  <a
+                    href=""
+                    class="text-primary-600 hover:underline"
+                    @click.prevent="show_pin_modal = !show_pin_modal">
+                    Change email
+                  </a>
+                </div>
+              </div>
+              <div class="grid lg:grid-cols-2">
+                <div>
+                  <div>
+                    Update  Phone Number:
+                  </div>
+                  <div class="text-sm font-light text-gray-500">
+                    Change your phone number to a new one
+                  </div>
+                </div>
+                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
+                  <a
+                    href=""
+                    @click.prevent="reset_pin_modal = true"
+                    class="text-primary-600 hover:underline">
+                    Change number
                   </a>
                 </div>
               </div>
