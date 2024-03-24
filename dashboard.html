@@ -554,7 +554,7 @@
     </div>
 
     <div>
-      <a href="#">
+      <a href="#" @click.prevent="sidebar_open = false; is_fund_modal_open = true">
         <div
           class="relative flex items-center justify-between px-5 py-4 overflow-hidden text-black duration-200 ease-linear bg-gray-100 lg:p-6 hover:bg-primary-50 hover:shadow hover:scale-105 gap-x-5 rounded-xl">
           <div>
@@ -741,16 +741,16 @@
   x-show="is_fund_modal_open"
   x-transition
   x-transition.opacity>
-  <div class="w-full p-10 bg-white rounded-lg lg:w-3/12">
+  <div style="font-weight: 600;" class="w-full p-10 bg-white rounded-lg lg:w-3/12">
     <div
       :class="current_view == views.INDEX ? '' : 'hidden'">
       <div class="flex items-center justify-between">
         <div>
           <div class="text-2xl font-semi-bold">
-            Add Funds
+            Contact Admin
           </div>
-          <div class="text-sm font-light text-gray-500">
-            How do you want to topup?
+          <div style="font-weight: 500;" class="text-sm font-light text-gray-500">
+            How can we help you?
           </div>
         </div>
         <div>
@@ -762,30 +762,32 @@
           </a>
         </div>
       </div>
-                  <div>
-        <div class="flex items-center justify-between px-5 py-3 mt-5 bg-gray-100 border border-gray-300 rounded-lg">
-          <div>
-            <div class="text-xl font-semibold">
-              2056667112
+      <div>
+        <a href="https://wa.me/2348087112167">
+          <div class="flex items-center justify-between px-5 py-3 mt-5 bg-gray-100 border border-gray-300 rounded-lg">
+            <div>
+              <div class="text-xl font-semibold">
+                08087112167
+              </div>
+              <div class="text-gray-600">
+                Chat with us
+              </div>
             </div>
-            <div class="text-gray-600">
-              Kuda Bank
+            <div>
+              <a
+                @click.prevent="copyAccountNumber(2056667112)"
+                href="https://wa.me/2348087112167">
+                <i class="text-gray-600 fab fa-whatsapp"></i>
+              </a>
             </div>
-          </div>
-          <div>
-            <a
-              @click.prevent="copyAccountNumber(2056667112)"
-              href="">
-              <i class="text-gray-600 fa fa-copy"></i>
-            </a>
-          </div>
         </div>
+        </a>
         <div class="mt-2">
           <div
             :class="is_copying ? '' : 'hidden'"
-            class="text-xs text-atg">Account number copied...</div>
+            class="text-xs text-atg"></div>
           <div class="text-xs text-gray-600">
-            Transfer to this account to fund your wallet.
+            Do you have any issue with your account?.
           </div>
         </div>
       </div>
@@ -800,10 +802,10 @@
             <div class="flex items-center justify-between">
               <div>
                 <div>
-                  <span class="text-atg">Airtime</span>
+                  <span class="text-atg">Withdrawal</span>
                 </div>
                 <div class="text-sm font-light text-gray-600">
-                  Convert your airtime to cash
+                 Withdrawal complaints 
                 </div>
               </div>
               <div>
@@ -819,10 +821,10 @@
             <div class="flex items-center justify-between">
               <div>
                 <div>
-                  <span class="text-atg">ATM Card</span>
+                  <span class="text-atg">Assistance</span>
                 </div>
                 <div class="text-sm font-light text-gray-600">
-                  Fund your wallet using ATM Card
+                  Fell free to ask us any question.
                 </div>
               </div>
               <div>
@@ -838,10 +840,10 @@
             <div class="flex items-center justify-between">
               <div>
                 <div>
-                  <span class="text-atg">Naira Pin</span>
+                  <span class="text-atg">Account  Deactivation</span>
                 </div>
                 <div class="text-sm font-light text-gray-600">
-                  Load Aimtoget wallet with naira-pin
+                  Do you want to deactivate your account?
                 </div>
               </div>
               <div>
