@@ -1,0 +1,386 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#ab2923">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="csrf-token" content="f849f83a7bc6fa24c1ce39fb6761715b963eba52">
+  <meta name="google-site-verification" content="c_LAXHEHxcNq1-aJO5h6KHVhmuVz7pgsfx9HbbN7BXg" />
+    <meta name="description"
+    content="Fastest and easiest way to convert your airtime to cash. Accept payments for your business and services today using airtime." />
+  
+    <meta name="keywords"
+    content="Easiest way to convert airtime to cash in Nigeria, Make payment with airtime, Send and recieve payment in Nigeria with airtime, airtime is money, buy cheap data, MTN, Glo, 9mobile, Airtel, make payment for Gotv, Dstv" />
+    <meta property="og:image" content="https://aimtoget.com/assets/images/new/favicon.png">
+  <title>Account Settings
+</title>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/styles.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2.5/fonts.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/iziToast.min.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/css/v2/sweetalert2.min.css?v=2.5.6998 "/>
+  <link rel="stylesheet" href="https://aimtoget.com/assets/fontawesome-free-6.1.2-web/css/all.min.css">
+  <link rel="icon" href="https://aimtoget.com/assets/images/new/atg-favicon.png">
+  <link rel="stylesheet" href="assets/fontawesome-free-6.1.2-web/css/all.min.css">
+  <script src="https://aimtoget.com/assets/js/v2/alpine.persist.min.js" defer></script>
+  <script src="https://aimtoget.com/assets/js/v2/alpine.intersect.min.js" defer></script>
+  <script defer src="https://aimtoget.com/assets/js/v2/alpine.min.js"></script>
+  <script src="https://aimtoget.com/assets/js/axios.min.js?v=2.5.6998"></script>
+  <script>const BASE_URL = 'https://aimtoget.com';</script>
+  <script src="https://aimtoget.com/assets/js/v2/iziToast.min.js?v=2.5.6998"></script>
+  <script src="https://aimtoget.com/assets/js/v2/sweetalert2.all.min.js?v=2.5.6998"></script>
+  <script src="https://aimtoget.com/assets/js/v2/utils.js?v=2.5.6998"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90432823-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-90432823-1');
+  </script>
+
+    </head>
+
+<body
+  class="bg-white"
+  :class="(sidebar_open || is_fund_modal_open) ? 'overflow-hidden h-full' : ''"
+  x-init="() => {
+    $refs.sidebar.classList.remove('-left-72')
+  }"
+  x-data="{
+    sidebar_open:false,
+    is_fund_modal_open: false,
+    openNairaPin() {
+      Notify.error(
+        'Service Unavailable!',
+        'Naira pin is currently unavailable. Please check back later.'
+      )
+    }
+  }">
+  <aside
+    x-ref="sidebar"
+    class="fixed inset-y-0 px-6 py-5 text-sm text-gray-800 duration-300 bg-gray-100 border-r -left-72 lg:left-0 w-72"
+    :class="sidebar_open ? 'left-0 z-40' : '-left-72 lg:left-0'">
+    
+    <div class="p-5 bg-white rounded-lg shadow">
+      <div class="flex items-center justify-between">
+        <div>
+          <a href="">
+            princejboy
+          </a>
+        </div>
+        <div>
+          <a href="login.html">
+            <i class="fa fa-power-off"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <ul class="mt-10 space-y-8">
+      <li>
+        <ul class="space-y-4">
+          <li>
+            <a
+              class="block duration-300 hover:text-primary-main"
+              href="dashboard.html">
+              <i class="fas fa-tachometer-alt"></i>
+              <span class="inline-block ml-1">
+                Dashboard
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+
+      <li>
+        <div class="font-medium text-gray-500">
+          Main
+        </div>
+        <ul class="mt-2 space-y-3">
+          <li>
+            <a
+              href="sponsored-post.html"
+              class="duration-300 hover:text-primary-main">
+              <i class="fab fa-pushed"></i>
+              <span class="inline-block ml-1">
+                Sponsored Post
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="perform-task.html">
+              <i class="fas fa-tasks"></i>
+              <span class="inline-block ml-1">
+                Perform Task
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="withdraw.html">
+              <i class="fa fa-wallet"></i>
+              <span class="inline-block ml-1">
+                Withdraw Funds
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="top-earners.html">
+              <i class="fa fa-users"></i>
+              <span class="inline-block ml-1">
+                Top Earners
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="spin.html">
+              <i class="fa fa-spinner"></i>
+              <span class="inline-block ml-1">
+                Spin and Win
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="font-medium text-gray-500">
+          Services
+        </div>
+        <ul class="mt-2 space-y-3">
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="settings.html">
+              <i class="fas fa-bank"></i>
+              <span class="inline-block ml-1">
+                Update Bank
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="support.html">
+              <i class="fas fa-headphones"></i>
+              <span class="inline-block ml-1">
+                Support
+              </span>
+            </a>
+          </li>
+          
+      <li>
+        <div class="font-medium text-gray-500">
+          Settings
+        </div>
+        <ul class="mt-2 space-y-3">
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="settings.html">
+              <i class="fas fa-cog"></i>
+              <span class="inline-block ml-1">
+                Account Settings
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="duration-300 hover:text-primary-main"
+              href="login.html">
+              <i class="fas fa-power-off"></i>
+              <span class="inline-block ml-1">
+                Logout
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
+  <main style="font-weight: 500; color: rgb(63, 59, 59);" class="lg:ml-72">
+    <header class="fixed inset-x-0 top-0 z-10 px-5 py-3 bg-white border-b lg:z-0 lg:relative">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-x-5">
+          <div class="flex items-center lg:hidden">
+            <a 
+              href="" 
+              @click.prevent="sidebar_open = !sidebar_open"
+              class="flex items-center justify-center w-8 h-8 bg-gray-100 rounded-full">
+              <i class="fas fa-bars"></i>
+            </a>
+          </div>
+          <div>
+            <a href="https://aimtoget.com/app">
+              <img
+                class="h-6 lg:h-7"
+                src="https://aimtoget.com/assets/images/new/aimtoget-logo.svg"
+                alt="">
+            </a>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-3 lg:gap-x-5">
+          <a
+            x-data="{
+              show_balance: $persist(false).as('atg_balance_show')
+            }"
+            x-init="() => {
+              window.addEventListener('show_hide_balance', e => {
+                show_balance = !show_balance
+              })
+            }"
+            @click.prevent="show_balance = !show_balance"
+            href=""
+            class="hidden px-2 py-1 text-sm text-white duration-300 rounded lg:block lg:px-3 lg:py-2 hover:bg-primary-600 bg-primary-main">
+            ₦ 
+            <span
+              x-cloak
+              :class="show_balance ? '' : 'hidden'">
+              19,920.00
+            </span>
+            <span
+              x-cloak
+              :class="show_balance ? 'hidden' : ''">
+              ******
+            </span>
+          </a>
+          <a
+            href="https://aimtoget.com/app/settings"
+            class="px-1 text-gray-800 lg:text-xl lg:px-2 lg:py-1 hover:bg-gray-100 rounded-xl">
+            <i class="fa fa-cog"></i>
+          </a>
+          <a
+            href=""
+            class="px-1 text-gray-800 lg:text-xl lg:px-2 lg:py-1 hover:bg-gray-100 rounded-xl">
+            <i class="far fa-bell"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+        <div
+      class="container relative z-0 px-5 pb-10 mx-auto mt-16 lg:mt-0">
+      <div
+  x-data="{
+    tab: 1,
+    tabs: {
+      PROFILE: 1,
+      //PAYMENTS: 3
+    }
+  }">
+
+  <div class="mt-5">
+    <ul class="inline-flex p-2 overflow-hidden text-sm text-gray-800 bg-gray-100 rounded-full gap-x-2">
+      <template x-for="(value, key) in tabs">
+        <li>
+          <a
+            @click.prevent="tab = value"
+            class="block px-5 py-1 capitalize duration-300 rounded-full"
+            :class="tab == value ? 'bg-white' : 'hover:bg-atg-light'"
+            href=""
+            x-text="key.toLowerCase()">
+          </a>
+        </li>
+      </template>
+    </ul>
+  </div>
+
+  <div class="mt-5 lg:mt-10">
+    <div
+      :class="tab === tabs.PROFILE ? '' : 'hidden'"
+      x-cloak>
+      <div>
+        <div>
+          <div class="pb-3 text-2xl text-gray-400 border-b border-gray-100">
+            Account Information
+          </div>
+        </div>
+        <br>
+        <div class="grid lg:grid-cols-2">
+          <div class="mb-1 lg:mb-0">
+            <div>
+              Update Name:
+            </div>
+            <div style="font-weight: 450;" class="text-sm font-light text-gray-500">
+              Change your old name to new one.
+            </div>
+          </div>
+          <div
+            class="flex items-center">
+            <input
+            value="Adeagbo Josiah"
+              placeholder="Full Name"
+              class="w-full h-12 px-3 text-sm border border-gray-100 rounded-lg outline-none focus:ring-2 ring-atg-light"
+              type="text">
+          </div>
+        </div>
+        <br>
+        <div class="grid lg:grid-cols-2">
+          <div class="mb-1 lg:mb-0">
+            <div>
+              Update Phone Number:
+            </div>
+            <div style="font-weight: 450;" class="text-sm font-light text-gray-500">
+              Change your old name to new one.
+            </div>
+          </div>
+          <div
+            class="flex items-center">
+            <input
+            value="08087112167"
+              placeholder="Phone number"
+              class="w-full h-12 px-3 text-sm border border-gray-100 rounded-lg outline-none focus:ring-2 ring-atg-light"
+              type="number">
+          </div>
+        </div>
+        <br>
+        <div class="grid lg:grid-cols-2">
+          <div class="mb-1 lg:mb-0">
+            <div>
+              Update Email:
+            </div>
+            <div style="font-weight: 450;" class="text-sm font-light text-gray-500">
+              Change your old name to new one.
+            </div>
+          </div>
+          <div
+            class="flex items-center">
+            <input
+            value="adeagbojosiah1@gmail.com"
+              placeholder="Email address"
+              class="w-full h-12 px-3 text-sm border border-gray-100 rounded-lg outline-none focus:ring-2 ring-atg-light"
+              type="text">
+          </div>
+        </div>
+        <div class="flex justify-end pt-4">
+          <button
+            type="submit"
+            class="w-full px-5 py-3 text-white duration-500 rounded-lg lg:w-auto bg-atg"
+            :class="is_loading ? 'opacity-60 cursor-not-allowed' : 'hover:bg-primary-600'">
+            <template x-if="is_loading">
+            </template>
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script
+  async
+  type="text/javascript"
+  src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>  </main>
+</body>
+
+</html>

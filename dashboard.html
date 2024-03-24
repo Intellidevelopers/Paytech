@@ -162,17 +162,7 @@
         </div>
         <ul class="mt-2 space-y-3">
           <li>
-            <a
-              class="duration-300 hover:text-primary-main"
-              href="settings.html">
-              <i class="fas fa-bank"></i>
-              <span class="inline-block ml-1">
-                Update Bank
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
+            <a @click.prevent="sidebar_open = false; is_fund_modal_open = true"
               class="duration-300 hover:text-primary-main"
               href="support.html">
               <i class="fas fa-headphones"></i>
@@ -354,8 +344,7 @@
             <div class="flex space-x-5 text-xs lg:text-base lg:space-x-0 lg:space-y-4 lg:block">
               <div>
                 <a
-                  href=""
-                  @click.prevent="is_fund_modal_open = true"
+                  href="earning.html"
                   class="block px-3 py-2 text-center text-white duration-300 rounded lg:w-32 hover:bg-primary-700 bg-primary-600">
                   <i class="fab fa-pushed"></i>
                   <span class="mr-1">

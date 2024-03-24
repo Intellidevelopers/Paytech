@@ -474,51 +474,8 @@
   </a>
 </div>                </div>
               </div>
-              <div class="grid grid-cols-4 lg:grid-cols-2">
-                <div class="col-span-3 lg:col-span-1">
-                  <div>
-                    Low Balance Notification:
-                  </div>
-                  <div class="text-sm font-light text-gray-500">
-                    We will send you a message once your balance is low.
-                  </div>
-                </div>
-                <div
-                  class="flex items-center justify-end lg:justify-start">
-                  <div x-data=>
-  <a
-    @click.prevent="send_low_balance_notification = !send_low_balance_notification" 
-    href="">
-    <span
-      class="flex items-center w-12 h-6 px-1 duration-500 bg-gray-200 rounded-full"
-      :class="send_low_balance_notification ? 'justify-end' : 'justify-start' ">
-      <span
-        class="w-4 h-4 duration-500 rounded-full"
-        :class="send_low_balance_notification ? 'bg-atg' : 'bg-gray-500'"></span>
-    </span>
-  </a>
-</div>                </div>
-              </div>
-              <div class="grid lg:grid-cols-2">
-                <div class="mb-1 lg:mb-0">
-                  <div>
-                    Low Balance Limit:
-                  </div>
-                  <div class="text-sm font-light text-gray-500">
-                    Amount low balance notification will be sent
-                  </div>
-                </div>
-                <div
-                  class="flex items-center">
-                  <input
-                    :disabled="is_loading"
-                    x-model="low_balance_amount"
-                    placeholder="Low balance amount"
-                    class="w-full h-12 px-3 text-sm border border-gray-100 rounded-lg outline-none focus:ring-2 ring-atg-light"
-                    type="number"
-                    min="10">
-                </div>
-              </div>
+             
+              
               <div class="grid grid-cols-2">
                 <div></div>
                 <div>
@@ -618,72 +575,8 @@
           </div>
         </div>
       </div>
-      <br>
       <div>
-        <div>
-          <div class="pb-3 text-2xl text-gray-400 border-b border-gray-100">
-            Account Settings
-          </div>
-    
-          <div class="lg:w-7/12">
-            <div class="mt-10 space-y-10">
-              <div class="grid lg:grid-cols-2">
-                <div>
-                  <div>
-                    Update Full Name:
-                  </div>
-                  <div class="text-sm font-light text-gray-500">
-                    Change your old name to a new one
-                  </div>
-                </div>
-                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
-                  <a
-                    href=""
-                    class="text-primary-600 hover:underline"
-                    @click.prevent="show_password_modal = !show_password_modal">
-                    Change your name
-                  </a>
-                </div>
-              </div>
-              <div class="grid lg:grid-cols-2">
-                <div>
-                  <div>
-                    Update Email:
-                  </div>
-                  <div class="text-sm font-light text-gray-500">
-                    Change your old email to a new one
-                  </div>
-                </div>
-                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
-                  <a
-                    href=""
-                    class="text-primary-600 hover:underline"
-                    @click.prevent="show_pin_modal = !show_pin_modal">
-                    Change email
-                  </a>
-                </div>
-              </div>
-              <div class="grid lg:grid-cols-2">
-                <div>
-                  <div>
-                    Update  Phone Number:
-                  </div>
-                  <div class="text-sm font-light text-gray-500">
-                    Change your phone number to a new one
-                  </div>
-                </div>
-                <div class="mt-1 lg:flex lg:mt-0 lg:items-center">
-                  <a
-                    href=""
-                    @click.prevent="reset_pin_modal = true"
-                    class="text-primary-600 hover:underline">
-                    Change number
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <div
