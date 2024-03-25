@@ -41,7 +41,52 @@
     gtag('js', new Date());
     gtag('config', 'UA-90432823-1');
   </script>
-
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    h2{
+      font-weight:700;
+      font-size: 20px;
+    }
+    .free{
+      font-size: 14px;
+    }
+    .earners{
+      background-color: rgba(207, 205, 205, 0.267);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    b{
+      background-color: rgb(3, 175, 80);
+      padding: 3px;
+      border-radius: 10%;
+      color: white;
+    }
+    .refer{
+      background-color: rgb(212, 3, 3);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 13px;
+      float: right;
+      margin-top: 5%;
+    }
+    .earner{
+      background-color: rgba(135, 179, 190, 0.267);
+      padding: 20px;
+      border-radius: 5px;
+    }
+</style>
     </head>
 
 <body
@@ -276,7 +321,7 @@
   x-data="{
     tab: 1,
     tabs: {
-      PROFILE: 1,
+      Earners: 1,
       //PAYMENTS: 3
     }
   }">
@@ -296,9 +341,84 @@
       </template>
     </ul>
   </div>
-
   <div class="mt-5 lg:mt-10">
     
+   <div class="earners">
+    <h2>Top Earners</h2>
+    <p class="free">Free Data Referral Contest (WEEKLY)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Referrals</th>
+                <th>Earnings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Debright</td>
+                <td><b>0</b></td>
+                <td>₦10,700.00</td>
+            </tr>
+            <tr>
+                <td>Prosper</td>
+                <td><b>0</b></td>
+                <td>₦7,600.00</td>
+            </tr>
+            <tr>
+                <td>Everythingsuzy</td>
+                <td><b>0</b></td>
+                <td>₦6,100.00</td>
+            </tr>
+            <tr>
+                <td>Ellankere</td>
+                <td><b>0</b></td>
+                <td>₦5,700.00</td>
+            </tr>
+            <tr>
+                <td>Chinenyenwa</td>
+                <td><b>0</b></td>
+                <td>₦5,250.00</td>
+            </tr>
+            <tr>
+                <td>Kiki</td>
+                <td><b>0</b></td>
+                <td>₦3,900.00</td>
+            </tr>
+            <tr>
+                <td>Anniesweet</td>
+                <td><b>0</b></td>
+                <td>₦3,350.00</td>
+            </tr>
+            <tr>
+                <td>Amakaben</td>
+                <td><b>0</b></td>
+                <td>₦3,250.00</td>
+            </tr>
+            <tr>
+                <td>Muhammadalhaji</td>
+                <td><b>0</b></td>
+                <td>₦3,150.00</td>
+            </tr>
+            <tr>
+                <td>Simplebaby</td>
+                <td><b>0</b></td>
+                <td>₦2,950.00</td>
+            </tr>
+        </tbody>
+    </table>
+   </div>
+   <br>
+   <div class="earner">
+    <h2>Refer & Earn ₦250</h2>
+    <p class="free">Copy your referral link below and refer your firends and families. The more people you refer, the more money you earn.</p>
+     
+    <table>
+      <a class="refer" href="">
+        Copy referral link
+      </a>
+    </table>
+   </div>
   </div>
 <script
   async
