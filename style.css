@@ -31,11 +31,9 @@
 .hdtext{
     font-weight: 600;
     color: rgba(0, 0, 0, 0.822);
-    margin-left: -59%;
 }
 .under{
     font-weight: 400;
-    margin-left: -27%;
 }
 input::placeholder{
     color: rgba(167, 161, 161, 0.575);

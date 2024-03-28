@@ -45,83 +45,83 @@
 
 
 <body class="font-body">
-    <header x-ref="header" x-data="{scrolled: false, mnav_opened: false}" x-init="() => {
-        window.addEventListener('scroll', e => {
-          let { scrollY } = window
-          scrolled = scrollY > ($refs.header.offsetHeight + 20)
-        })
-      }" class="fixed inset-x-0 top-0 z-50 duration-500 bg-atg-light" :class="scrolled ? 'shadow-sm' : ''">
-      <div class="content">
-        <div class="flex items-center justify-between py-4">
-          <div>
-            <a href="index.html">
-              <img class="h-8" src="logo.png" alt="Aimtoget">
-            </a>
-          </div>
-          <div class="hidden lg:block">
-            <nav class="items-center hidden text-black lg:flex gap-x-10">
-                        <a href="index.html" class="duration-300 hover:underline hover:text-atg">
-                Home
-              </a>
-              <a href="user/transact.html" class="duration-300 hover:underline hover:text-atg">
-                Coupon Checker
-              </a>
-              <a href="product/data-topup.html" class="duration-300 hover:underline hover:text-atg">
-                Buy Coupon
-              </a>
-              <a href="nairapin.html" class="duration-300 hover:underline hover:text-atg">
-                About
-              </a>
-                                </nav>
-          </div>
-          <div>
-            <nav class="items-center hidden lg:flex gap-x-6">
-              <a href="login.html"
-                class="px-5 py-2 text-sm font-medium duration-500 border rounded lg:text-base text-atg hover:shadow-lg border-atg">
-                Login
-              </a>
-              <a href="register.html"
-                class="px-5 py-2 text-sm font-medium text-white duration-500 border rounded lg:text-base hover:bg-primary-600 bg-atg hover:shadow-lg border-atg">
-                Create Account
-              </a>
-            </nav>
-            <nav class="lg:hidden">
-              <a href="#" @click.prevent="mnav_opened = !mnav_opened"
-                class="inline-flex items-center justify-center w-8 h-8 border rounded-full text-atg border-atg">
-                <i class="fa" :class="mnav_opened ? 'fa-times' : 'fa-bars'"></i>
-                <span class="hidden">Menu</span>
-              </a>
-            </nav>
-          </div>
-        </div>
-        <div class="pb-10 mt-5 lg:hidden" :class="mnav_opened ? '' : 'hidden'">
-          <div class="grid gap-5 text-center">
-            <a href="index.html" class="duration-300 hover:underline hover:text-atg">
-              Home
-            </a>
-            <a href="user/transact.html" class="duration-300 hover:underline hover:text-atg">
-              Coupon Checker
-            </a>
-            <a href="product/data-topup.html" class="duration-300 hover:underline hover:text-atg">
-              Buy Coupon
-            </a>
-            <a href="nairapin.html" class="duration-300 hover:underline hover:text-atg">
-              About
-            </a>
-                        
-    
-            <a href="login.html"
-              class="px-5 py-2 text-sm font-medium duration-500 border rounded lg:text-base text-atg hover:shadow-lg border-atg">
-              Login
-            </a>
-            <a href="register.html"
-              class="px-5 py-2 text-sm font-medium text-white duration-500 border rounded lg:text-base bg-atg hover:shadow-lg border-atg">
-              Create Account
-            </a>
-          </div>
-        </div>
+  <header x-ref="header" x-data="{scrolled: false, mnav_opened: false}" x-init="() => {
+    window.addEventListener('scroll', e => {
+      let { scrollY } = window
+      scrolled = scrollY > ($refs.header.offsetHeight + 20)
+    })
+  }" class="fixed inset-x-0 top-0 z-50 duration-500 bg-atg-light" :class="scrolled ? 'shadow-sm' : ''">
+  <div class="content">
+    <div class="flex items-center justify-between py-4">
+      <div>
+        <a href="index.html">
+          <img class="h-8" src="logo.png" alt="Aimtoget">
+        </a>
       </div>
-    </header>
+      <div class="hidden lg:block">
+        <nav class="items-center hidden text-black lg:flex gap-x-10">
+                    <a href="index.html" class="duration-300 hover:underline hover:text-atg">
+            Home
+          </a>
+          <a href="checker.html" class="duration-300 hover:underline hover:text-atg">
+            Coupon Checker
+          </a>
+          <a href="coupon.html" class="duration-300 hover:underline hover:text-atg">
+            Buy Coupon
+          </a>
+          <a href="about.html" class="duration-300 hover:underline hover:text-atg">
+            About
+          </a>
+                            </nav>
+      </div>
+      <div>
+        <nav class="items-center hidden lg:flex gap-x-6">
+          <a href="login.html"
+            class="px-5 py-2 text-sm font-medium duration-500 border rounded lg:text-base text-atg hover:shadow-lg border-atg">
+            Login
+          </a>
+          <a href="register.html"
+            class="px-5 py-2 text-sm font-medium text-white duration-500 border rounded lg:text-base hover:bg-primary-600 bg-atg hover:shadow-lg border-atg">
+            Create Account
+          </a>
+        </nav>
+        <nav class="lg:hidden">
+          <a href="#" @click.prevent="mnav_opened = !mnav_opened"
+            class="inline-flex items-center justify-center w-8 h-8 border rounded-full text-atg border-atg">
+            <i class="fa" :class="mnav_opened ? 'fa-times' : 'fa-bars'"></i>
+            <span class="hidden">Menu</span>
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div class="pb-10 mt-5 lg:hidden" :class="mnav_opened ? '' : 'hidden'">
+      <div class="grid gap-5 text-center">
+        <a href="index.html" class="duration-300 hover:underline hover:text-atg">
+          Home
+        </a>
+        <a href="checker.html" class="duration-300 hover:underline hover:text-atg">
+          Coupon Checker
+        </a>
+        <a href="coupon.html" class="duration-300 hover:underline hover:text-atg">
+          Buy Coupon
+        </a>
+        <a href="about.html" class="duration-300 hover:underline hover:text-atg">
+          About
+        </a>
+                    
+
+        <a href="login.html"
+          class="px-5 py-2 text-sm font-medium duration-500 border rounded lg:text-base text-atg hover:shadow-lg border-atg">
+          Login
+        </a>
+        <a href="register.html"
+          class="px-5 py-2 text-sm font-medium text-white duration-500 border rounded lg:text-base bg-atg hover:shadow-lg border-atg">
+          Create Account
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
 <main>
   <section
   x-data='{
@@ -220,78 +220,72 @@
 </main>
 
 <footer class="pt-10 pb-12 mt-10 text-sm text-white bg-black lg:mt-0">
-    <div class="content">
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-y-10 lg:gap-y-0 lg:gap-x-10">
-        <div class="col-span-2 lg:items-start lg:col-span-1">
-          <div>
-            <img class="h-10" src="logo.png" alt="">
-          </div>
-          <div class="hidden mt-1 italic text-gray-300 lg:block">
-            Paytech Makes It Easier For Everyone To Make Maximum Profit by joining our platform...
-          </div>
-        </div>
+  <div class="content">
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-y-10 lg:gap-y-0 lg:gap-x-10">
+      <div class="col-span-2 lg:items-start lg:col-span-1">
         <div>
-          <div class="font-semibold text-w">
-            Company
-          </div>
-          <ul class="mt-6 space-y-4 text-gray-400">
-            <li>
-              <a href="#" class="hover:text-atg">
-                About
-              </a>
-            </li>
-            <li>
-              <a href="blog.html" class="hover:text-atg">
-                Our Blog
-              </a>
-            </li>
-                      <li>
-              <a href="privacy-policy.html" class="hover:text-atg">
-                Privacy Policy
-              </a>
-            </li>
-            <li>
-              <a href="terms.html" class="hover:text-atg">
-                Terms of Service
-              </a>
-            </li>
-          </ul>
+          <img class="h-10" src="logo.png" alt="">
         </div>
-        <div>
-          <ul class="space-y-4 text-gray-400">
-            <li class="flex space-x-5 text-lg text-gray-500">
-              <a target="_blank" href="" class="hover:text-atg">
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a target="_blank" href="" class="hover:text-atg">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a target="_blank" href="" class="hover:text-atg">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:support@paylio.com" class="hover:text-atg">
-                support@paylio.com
-              </a>
-            </li>
-            <li>
-              <a href="tel:+2348088886823" class="hover:text-atg">
-                (+234) 808 888 6823
-              </a>
-            </li>
-            <li>
-              Suite B16, Al-barka shopping complex. Bodija, Ibadan.
-            </li>
-          </ul>
+        <div class="hidden mt-1 italic text-gray-300 lg:block">
+          Paytech Makes It Easier For Everyone To Make Maximum Profit by joining our platform...
         </div>
       </div>
-      <div class="py-5 mt-12 text-center text-gray-600 border-t border-b border-gray-800">
-        &copy; 2023 &middot;
-        Paytech Technology Ltd. &middot; RC1531451
+      <div>
+        <div class="font-semibold text-w">
+          Company
+        </div>
+        <ul class="mt-6 space-y-4 text-gray-400">
+          <li>
+            <a href="about.html" class="hover:text-atg">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="privacy-policy.html" class="hover:text-atg">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="terms.html" class="hover:text-atg">
+              Terms of Service
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="space-y-4 text-gray-400">
+          <li class="flex space-x-5 text-lg text-gray-500">
+            <a target="_blank" href="" class="hover:text-atg">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a target="_blank" href="" class="hover:text-atg">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a target="_blank" href="" class="hover:text-atg">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:support@paylio.com" class="hover:text-atg">
+              support@peetech.com.ng
+            </a>
+          </li>
+          <li>
+            <a href="tel:+2348088886823" class="hover:text-atg">
+              (+234) 808 888 6823
+            </a>
+          </li>
+          <li>
+            Suite B16, Al-barka shopping complex. Bodija, Ibadan.
+          </li>
+        </ul>
       </div>
     </div>
-  </footer>
-  </body>
-  </html>
-  
+    <div class="py-5 mt-12 text-center text-gray-600 border-t border-b border-gray-800">
+      &copy; 2023 &middot;
+      Peetech Technology Ltd. &middot; RC1531451
+    </div>
+  </div>
+</footer>
+</body>
+</html>
