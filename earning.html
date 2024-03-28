@@ -234,9 +234,9 @@
             </a>
           </li>
           <li>
-            <a
+            <a @click.prevent="sidebar_open = false; is_fund_modal_open = true"
               class="duration-300 hover:text-primary-main"
-              href="support.html">
+              href="#">
               <i class="fas fa-headphones"></i>
               <span class="inline-block ml-1">
                 Support
@@ -799,94 +799,96 @@
     </div>
     
     
-<div
-  class="fixed inset-0 z-30 bg-black bg-opacity-60"
-  :class="sidebar_open ? '' : 'hidden'"
-  @click.prevent="sidebar_open = false" x-cloak></div>
-
-<div
-  x-cloak
-  x-data="{
-    is_copying: false,
-    current_view: 1,
-    views: {
-      INDEX: 1,
-      ATM_FUND: 2
-    },
-    close() {
-      this.current_view = this.views.INDEX
-      this.is_fund_modal_open = false
-    },
-    goto(uri) {
-      this.close()
-      location.href = uri
-    },
-    copyAccountNumber(acn) {
-      navigator.clipboard.writeText(acn).then(() => {
-        iziToast.success({
-          message: 'Account number copied',
-          position: 'topCenter',
-          timeout: 3000
-        })
-      })
-    }
-  }"
-  $ref="container"
-  class="fixed inset-0 z-50 flex items-end justify-center bg-black lg:shadow-xl lg:items-center bg-opacity-70"
-  x-show="is_fund_modal_open"
-  x-transition
-  x-transition.opacity>
-  <div class="w-full p-10 bg-white rounded-lg lg:w-3/12">
     <div
-      :class="current_view == views.INDEX ? '' : 'hidden'">
-      <div class="flex items-center justify-between">
-        <div>
-          <div class="text-2xl font-semi-bold">
-            Add Funds
-          </div>
-          <div class="text-sm font-light text-gray-500">
-            How do you want to topup?
-          </div>
-        </div>
-        <div>
-          <a
-            class="text-gray-500"
-            @click.prevent="close"
-            href="">
-            <i class="fa fa-times-circle"></i>
-          </a>
-        </div>
-      </div>
-                  <div>
-        <div class="flex items-center justify-between px-5 py-3 mt-5 bg-gray-100 border border-gray-300 rounded-lg">
+    class="fixed inset-0 z-30 bg-black bg-opacity-60"
+    :class="sidebar_open ? '' : 'hidden'"
+    @click.prevent="sidebar_open = false" x-cloak></div>
+  
+  <div
+    x-cloak
+    x-data="{
+      is_copying: false,
+      current_view: 1,
+      views: {
+        INDEX: 1,
+        ATM_FUND: 2
+      },
+      close() {
+        this.current_view = this.views.INDEX
+        this.is_fund_modal_open = false
+      },
+      goto(uri) {
+        this.close()
+        location.href = uri
+      },
+      copyAccountNumber(acn) {
+        navigator.clipboard.writeText(acn).then(() => {
+          iziToast.success({
+            message: 'Account number copied',
+            position: 'topCenter',
+            timeout: 3000
+          })
+        })
+      }
+    }"
+    $ref="container"
+    class="fixed inset-0 z-50 flex items-end justify-center bg-black lg:shadow-xl lg:items-center bg-opacity-70"
+    x-show="is_fund_modal_open"
+    x-transition
+    x-transition.opacity>
+    <div style="font-weight: 600;" class="w-full p-10 bg-white rounded-lg lg:w-3/12">
+      <div
+        :class="current_view == views.INDEX ? '' : 'hidden'">
+        <div class="flex items-center justify-between">
           <div>
-            <div class="text-xl font-semibold">
-              2056667112
+            <div class="text-2xl font-semi-bold">
+              Contact Admin
             </div>
-            <div class="text-gray-600">
-              Kuda Bank
+            <div style="font-weight: 500;" class="text-sm font-light text-gray-500">
+              How can we help you?
             </div>
           </div>
           <div>
             <a
-              @click.prevent="copyAccountNumber(2056667112)"
+              class="text-gray-500"
+              @click.prevent="close"
               href="">
-              <i class="text-gray-600 fa fa-copy"></i>
+              <i class="fa fa-times-circle"></i>
             </a>
           </div>
         </div>
-        <div class="mt-2">
-          <div
-            :class="is_copying ? '' : 'hidden'"
-            class="text-xs text-atg">Account number copied...</div>
-          <div class="text-xs text-gray-600">
-            Transfer to this account to fund your wallet.
+        <div>
+          <a href="https://wa.me/2348087112167">
+            <div class="flex items-center justify-between px-5 py-3 mt-5 bg-gray-100 border border-gray-300 rounded-lg">
+              <div>
+                <div class="text-xl font-semibold">
+                  08087112167
+                </div>
+                <div class="text-gray-600">
+                  Chat with us
+                </div>
+              </div>
+              <div>
+                <a
+                  @click.prevent="copyAccountNumber(2056667112)"
+                  href="https://wa.me/2348087112167">
+                  <i class="text-gray-600 fab fa-whatsapp"></i>
+                </a>
+              </div>
+          </div>
+          </a>
+          <div class="mt-2">
+            <div
+              :class="is_copying ? '' : 'hidden'"
+              class="text-xs text-atg"></div>
+            <div class="text-xs text-gray-600">
+              Do you have any issue with your account?.
+            </div>
           </div>
         </div>
-      </div>
-            <div>
-  
-      </div>
+              <div>
+    
+        </div>
       <ul class="mt-8 border-t">
         <li class="py-5 border-b border-gray-200">
           <a 
